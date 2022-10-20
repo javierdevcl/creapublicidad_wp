@@ -1,0 +1,93 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+
+		<header class="header">
+			{% block header %}
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+							<a href="{{site.url}}">
+								<img src="{{custom_logo_url}}" alt="Logotipo CreaPublicidad">
+							</a>
+							<a href="#">Productos</a>
+						</div>
+						<div class="col-md-6">
+							<input type="search" placeholder="¿Qué estas buscando?" value="" name="s">
+						</div>
+						<div class="col-md-3">
+							<a href="#">
+								Ayuda y contacto
+							</a>
+							<a href="#">
+								Mi Cuenta y cotizaciones
+							</a>
+						</div>
+					</div>
+				</div>
+				<nav id="nav-main" class="nav-main" role="navigation">
+					{% include "menu.twig" with {'items': menu.get_items} %}
+				</nav><!-- #nav -->
+			{% endblock %}
+		</header>
+
+		<section id="content" role="main" class="content-wrapper">
+			{% block content endblock %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer">
+				{% include 'footer.twig' %}
+			</footer>
+			<script src="{{ site.theme.link }}/assets/dist/app.js"></script>
+			<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+			<script src="{{ site.theme.link }}/assets/dist/owl.carousel.min.js"></script>
+			<script>
+				$(document).ready(function() {
+					$('.owl-carousel').owlCarousel({
+						loop: true,
+						margin: 0,
+						nav: true,
+						center: true,
+						dots: false,
+						autoplay: true,
+						autoplayTimeout: 6000,
+						autoplayHoverPause: false,
+						responsive: {
+							0: {
+								items: 2,
+								margin: 14,
+								center: true,
+								loop: true
+							},
+							480: {
+								items: 3,
+								loop: true
+							},
+							767: {
+								items: 4,
+								margin: 25
+							},
+							1140: {
+								items: 4,
+								margin: 40
+							},
+							1450: {
+								items: 4,
+								margin: 40
+							}
+						}
+					})
+				});
+			</script>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

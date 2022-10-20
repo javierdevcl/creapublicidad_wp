@@ -1,0 +1,70 @@
+<footer class="site-footer" id="colophon">
+    <div id="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Productos</h5>
+                    <ul class="list-unstyled mb-0">
+                        {% for item in footer_menu_1.items %}
+                            <li class="nav-main-item {{ item.classes|join(' ') }}">
+                                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Información</h5>
+                    <ul class="list-unstyled mb-0">
+                        {% for item in footer_menu_2.items %}
+                            <li class="nav-main-item {{ item.classes|join(' ') }}">
+                                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 newsletter">
+                    <h5>Newsletter</h5>
+                    <span>Ingresa tu correo y recibe todas nuestras ofertas.</span>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 contacto">
+                    <h5>Contacto</h5>
+                    <span>Envios a todo Chile</span>
+                    <ul class="list-unstyled mt-3 mb-0">
+                        <li>
+                            <a href="tel:+562 2952 0966">
+                                <i class="fas fa-phone-alt"></i> +562 2952 0966
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ventas@creapublicidad.cl">
+                                <i class="fas fa-envelope"></i> ventas@creapublicidad.cl
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-4 copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="mb-0">CreaPublicidad.cl - 2022 Desarrollado por Agencia de Marketing</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-0 text-center">Somos una IMPRENTA digital y offset hacemos enviós a todo chile, nos dedicamos a la impresión láser a color y estamos ubicados en pleno centro.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-redes text-md-end"">
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
