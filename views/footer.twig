@@ -1,9 +1,9 @@
 <footer class="site-footer" id="colophon">
-    <div id="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Productos</h5>
+    <div id="footer-top" class="py-9 bg-zinc-800">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-4 gap-4">
+                <div class="px-6 pb-6 border-r border-neutral-600">
+                    <h5 class="text-white text-2xl font-light pb-8">Productos</h5>
                     <ul class="list-unstyled mb-0">
                         {% for item in footer_menu_1.items %}
                             <li class="nav-main-item {{ item.classes|join(' ') }}">
@@ -12,8 +12,8 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Información</h5>
+                <div class="px-6 pb-6 border-r border-neutral-600">
+                    <h5 class="text-white text-2xl font-light pb-8">Información</h5>
                     <ul class="list-unstyled mb-0">
                         {% for item in footer_menu_2.items %}
                             <li class="nav-main-item {{ item.classes|join(' ') }}">
@@ -22,14 +22,14 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 newsletter">
-                    <h5>Newsletter</h5>
-                    <span>Ingresa tu correo y recibe todas nuestras ofertas.</span>
+                <div class="px-6 pb-6 newsletter border-r border-neutral-600">
+                    <h5 class="text-white text-2xl font-light pb-8">Newsletter</h5>
+                    <span class="text-gray-300 text-base">Ingresa tu correo y recibe todas nuestras ofertas.</span>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 contacto">
-                    <h5>Contacto</h5>
-                    <span>Envios a todo Chile</span>
-                    <ul class="list-unstyled mt-3 mb-0">
+                <div class="px-6 pb-6 contacto">
+                    <h5 class="text-white text-2xl font-light pb-8">Contacto</h5>
+                    <span class="text-gray-300 text-base">Envios a todo Chile</span>
+                    <ul class="list-unstyled text-gray-300 mt-3 mb-0">
                         <li>
                             <a href="tel:+562 2952 0966">
                                 <i class="fas fa-phone-alt"></i> +562 2952 0966
@@ -45,21 +45,21 @@
             </div>
         </div>
     </div>
-    <div class="p-4 copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
+    <div class="py-6 bg-black text-white text-sm leading-tight">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-4 gap-4">
+                <div>
                     <p class="mb-0">CreaPublicidad.cl - 2022 Desarrollado por Agencia de Marketing</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-span-2">
                     <p class="mb-0 text-center">Somos una IMPRENTA digital y offset hacemos enviós a todo chile, nos dedicamos a la impresión láser a color y estamos ubicados en pleno centro.</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="icon-redes text-md-end"">
-                        <a href="">
+                <div>
+                    <div class="text-end text-lg">
+                        <a href="" class="inline-flex items-center justify-center w-10 h-10 mr-2 text-white transition-colors duration-150 border-solid border border-white rounded-full focus:shadow-outline hover:text-slate-400 hover:border-slate-400">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="">
+                        <a href="" class="inline-flex items-center justify-center w-10 h-10 text-white transition-colors duration-150 border-solid border border-white rounded-full focus:shadow-outline hover:text-slate-400 hover:border-slate-400">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>

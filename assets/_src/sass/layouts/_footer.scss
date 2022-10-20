@@ -3,3 +3,9 @@
 .footer {
 	border-top: 1px solid $light-gray;
 }
+
+footer {
+	.container {
+		max-width: 1680px;
+	}
+}

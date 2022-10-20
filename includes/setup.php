@@ -14,6 +14,7 @@ class Theme extends Site
         add_action('after_setup_theme', array($this, 'theme_supports'));
         add_filter('timber/context', array($this, 'add_to_context'));
         add_filter('timber/twig', array($this, 'add_to_twig'));
+		add_filter('wp_enqueue_scripts', array($this, 'wp_enqueue_scripts'));
 
         parent::__construct();
     }
@@ -77,6 +78,19 @@ class Theme extends Site
         $twig->addExtension( new Twig\Extension\StringLoaderExtension() );
         return $twig;
     }
+
+	public function wp_enqueue_scripts()
+	{
+		wp_enqueue_style( 'bathe-main', get_theme_file_uri( 'assets/css/main.css' ) );
+		wp_enqueue_style( 'tailwind', get_theme_file_uri( 'assets/css/tailwind.css' ) );
+
+		wp_enqueue_script( 'bathe-bundle', get_theme_file_uri( 'assets/js/main.js' ), array(), null, true );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+
 }
 
 new Theme();
