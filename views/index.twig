@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="container">
+	<div class="container mx-auto">
 		<div class="row">
 			<div class="col-md-8">
 			</div>
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<section id="marque-home">
-		<div class="container home-container-top" id="marque-home">
+		<div class="container mx-auto home-container-top" id="marque-home">
 			<div class="row">
 				<div class="col-md-12">
 					<marquee class="align-middle"><h1>Imprenta digital y offset en Santiago</h1> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span></marquee>
@@ -18,27 +18,27 @@
 			</div>
 		</div>
 	</section>
-	<div class="container home-container-top owl-home">
-		<h2 class="text-center pt-5 pb-1">🔥Productos <span>Destacados</span>🔥</h2>
-		<div class="owl-carousel">
-			{% for post in top_selling %}
-				<div class="producto-item">
-					<a href="{{ post.link }}">
-						<img src="{{ post.thumbnail.src('shop_single') }}" />
-						<h5 class="text-center">{{ post.title }}</h5>
-					</a>
-					<span>Este tipo de tarjetas con Laminado están confeccionadas de papel couché, su impresión puede ser por ambas caras y sus...</span>
-					<a href="{{ post.link }}" class="boton-cotizar">Cotizar Ahora</a>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="container home-container">
+{#	<div class="container mx-auto home-container-top owl-home">#}
+{#		<h2 class="text-center pt-5 pb-1">🔥Productos <span>Destacados</span>🔥</h2>#}
+{#		<div class="owl-carousel">#}
+{#			{% for post in top_selling %}#}
+{#				<div class="producto-item">#}
+{#					<a href="{{ post.link }}">#}
+{#						<img src="{{ post.thumbnail.src('shop_single') }}" />#}
+{#						<h5 class="text-center">{{ post.title }}</h5>#}
+{#					</a>#}
+{#					<span>Este tipo de tarjetas con Laminado están confeccionadas de papel couché, su impresión puede ser por ambas caras y sus...</span>#}
+{#					<a href="{{ post.link }}" class="boton-cotizar">Cotizar Ahora</a>#}
+{#				</div>#}
+{#			{% endfor %}#}
+{#		</div>#}
+{#	</div>#}
+	<div class="container mx-auto home-container">
 		<div class="row">
 			<section id="ventajas-imprenta" class="pt-5 pb-2">
-				<div class="col-md-12">
+				<div class="grid grid-cols-1 gap-1">
 					<h2 class="text-center pb-4">Ventajas de la impresión online con CreaPublicidad</h2>
-					<div class="row">
+					<div class="grid grid-cols-2 gap-1">
 						<div class="col-md-6 pb-5">
 							<h3>
 								<div class="icon">
@@ -79,6 +79,81 @@
 				</div>
 			</section>
 			{{ post.content }}
+
+			<section id="nuestra-imprenta" class="py-5">
+				<div class="grid grid-cols-1 gap-1">
+					<h2 class="text-center pb-4">Nuestra Imprenta</h2>
+					<p>En primer lugar aquí podrá <b>imprimir</b> todo lo que necesita para su empresa. Garantizamos su comodidad en entregas rápidas y precios para todos los bolsillos. Como resultado nuestro compromiso como imprenta es entregar la más alta calidad en impresión, uno de los principales argumentos son precio y calidad y nos encontramos ubicados en el en el <a href="https://es.wikipedia.org/wiki/Barrio_Patronato">barrio patronato</a> de recoleta donde podrá ver todo los productos.</p>
+					<h3>¿Porque es tan importante tener una imprenta como respaldo?</h3>
+					Es altamente importante debido a que con ella podemos confiar nuestros proyectos de&nbsp;impresión digital. Usando diferentes estrategias de diseño inclinadas al mercado actual de la&nbsp;<span style="font-weight: bold;">imprenta</span>, entregando a los clientes un plus de profesionalidad y elegancia al momento de masificar cualquier tipo de campaña, evento, contacto etc.
+
+				</div>
+				<div class="grid grid-cols-2 gap-4">
+					<div class="col-md-7">
+						<h3>Que ofrece Nuestra Imprenta</h3>
+						<p>Podrás imprimir todos los materiales gráficos que necesita. Garantizamos la comodidad de igual manera contamos con los mejores precios de Chile, diseños profesionales y una fluidez en su entrega. Tenemos una amplia categoría de ofertas de productos para imprimir adaptados asegmentos del mercado.</p>
+						<h3>Que es la impresión Offset</h3>
+						<p>Es una técnica que implementamos que implica la transferencia de una imagen de una placa metálica a una manta de goma o rodillos antes de imprimirla en el medio de recepción, generalmente papel. En este método el papel el cliente final puede lograr que su proyecto de impresión digital obtenga los resultados más óptimos.</p>
+						<div class="grid grid-cols-3 pt-4">
+							<div class="m-auto">
+								<img width="176" height="26" src="https://www.creapublicidad.cl/wp-content/uploads/2020/07/roland-c.svg" alt="Roland">
+							</div>
+							<div class="m-auto">
+								<img width="187" height="39" src="https://www.creapublicidad.cl/wp-content/uploads/2020/07/canon-c.svg" class="object-center" alt="Canon">
+							</div>
+							<div class="m-auto">
+								<img width="187" height="42" src="https://www.creapublicidad.cl/wp-content/uploads/2020/07/brother.svg" class="object-center" alt="brother">
+							</div>
+						</div>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<img width="500" height="310" src="https://www.creapublicidad.cl/wp-content/uploads/2020/08/imprentadigital1.png" title="imprentadigital1" alt="imprentadigital1">
+					</div>
+				</div>
+			</section>
+			<section id="beneficios-imprenta" class="py-5">
+				<div class="grid grid-cols-1 gap-1">
+					<p>En Santiago de Chile podemos encontrar diversos servicios y oficios que llevan décadas funcionando en el país. El servicio de imprenta ha logrado permanecer a lo largo del tiempo a pesar de las situaciones económicas. Una imprenta de calidad puede ofrecer servicios para pequeñas y grandes corporaciones. La imprenta Crea Publicidad, ubicada en Santiago de Chile, nace con la necesidad de seguir entregando un servicio esencial para las empresas. Con la nueva tecnología podemos ofrecer impresiones digitales y offset. A continuación te vamos a dar más detalles de nuestros servicios de imprenta.</p>
+					<h2>Beneficios de una imprenta digital</h2>
+					<p>Si necesitas imprimir desde 300 o 500 piezas gráficas publicitarias o corporativas para tu empresa nuestra imprenta digital se acomoda a tus requerimientos logrando entregar un servicio de calidad en colores, cortes y terminaciones de material. También al imprimir por volumen puedes ahorrar algo de dinero.</p>
+					<h2>Impresiones por volúmenes grandes</h2>
+					<p>Si necesitas imprimir desde 500 o 2000 piezas gráficas como mínimo, ya necesitas escalar a una imprenta offset. Esto te ayudará a reducir costos y tiempos de producción. Las impresoras de gran formato son ideales para cumplir con la alta demanda de impresiones gráficas que exigen las empresas. Los colores y terminaciones siempre serán de la mejor calidad.</p>
+
+					<p>En Crea Publicidad puedes elegir al área de producción que más se acomode a tus necesidades, ofrecemos un servicio el servicio de imprenta digital y offset. Todos los procesos son supervisados por nuestros técnicos, especialistas en el rubro de las impresiones. Nos hacemos cargo de todos los pequeños detalles y siempre vamos a asesorar tus proyectos y archivos a imprimir, para así lograr llegar al color y terminación que necesitas.</p>
+					<h2>Cómo elegir una imprenta con taller y máquinas propias</h2>
+					<p>Si te preocupa que la imprenta sea una sub-imprenta que subcontrata los servicios de otra imprenta. Puedes solicitar una visita a nuestras instalaciones en Santiago de Chile, o puedes revisar las redes sociales o página web de la empresa. Esto hará que realmente encuentres un precio justo en impresiones.</p>
+
+					<p>En Crea Publicidad hemos invertido en tecnología de los mejores fabricantes de impresoras digitales y offset. También estamos en constante capacitación asistiendo a convenciones y ferias relacionadas al rubro.</p>
+					<h2>Cotizar servicios de imprenta</h2>
+					<p>Las imprentas más cotizadas son las que pueden entregar un precio justo y responden a los tiempos de producción pautados. En Crea Publicidad se le asignará un vendedor quien tomará sus requerimientos y hará seguimiento real a la producción de sus piezas gráficas.</p>
+					<h3>Conclusión de las imprentas</h3>
+					<p>La historia del mundo entero se ha presentado en piezas gráficas, por ende los servicios de una imprenta han sido una pieza clave para documentar la historia, constituciones, firmas y acuerdos entre países. El papel y la tinta han creado historia, por eso en Crea Publicidad nos enfocamos en entregar los mejores servicios en digital y offset y crear piezas gráficas que duran con el tiempo.</p>
+
+					<p>Queremos seguir creando historia en el rubro de las imprentas de Santiago de Chile. Nuestros vendedores están comprometidos con nuestra empresa y podemos ser una pieza clave en tu producción de papelería corporativa.</p>
+					<h3>Sucursales para imprimir en Santiago de Chile</h3>
+					<p>Si necesitas un proveedor directo con oficinas y taller de producción propio debes cotizar con nuestra imprenta Crea Publicidad. Nuestra sucursal de venta y producción se encuentra activa de lunes a sábado en Antonia <a href="https://www.google.com/maps/place/Imprenta+CreaPublicidad/@-33.4314573,-70.6438317,18.1z/data=!4m5!3m4!1s0x0:0x5feaf7ce858de1f9!8m2!3d-33.4318255!4d-70.6431635">López de Bello 246, Recoleta, 8420469, Región Metropolitana</a>.</p>
+					<h3>Cómo cotizar un servicio de la imprenta</h3>
+					<p>Para cotizar un servicio de impresión digital, offset, láser y color puedes comunicarte directo a nuestro <a href="https://wa.link/z62xcu">whatsapp +569 4042 4918</a> o a través de nuestro catálogo de productos disponibles en nuestra página web. Si tienes tiempo, puedes navegar por la <a href="https://www.creapublicidad.cl/tienda-imprenta/">tienda de la imprenta</a> y encontrar todos nuestros productos y servicios disponibles. Si necesitas una atención más personal no dudes en contactarnos vía teléfono o whatsapp.</p>
+					<h3>Cual es el formato de archivo que debo entregar a la imprenta</h3>
+					<p>El formato ideal siempre será el PDF este archivo se puede obtener de los programas illustrator o Photoshop. De igual manera los formatos, jpg, png, ai y psd son aceptados por nuestra imprenta. Cabe destacar que los textos de cada archivo deben ser trazados para evitar que se pixele o deforme el diseño. Para impresiones de un tamaño menor a 50 cm se recomienda renderizar a 300 dpi y para trabajos superiores a 50 cm mínimo 150 dpi.</p>
+
+					<p>Este lenguaje técnico lo manejan los diseñadores gráficos, de igual manera usted puede pedirle estos requerimientos a su diseñador. <i>Ey necesito un diseño de 50 x 50 cm en 300 dpi exportado en formato pdf para imprenta, porfavor!</i>.</p>
+					<h3>Quiero imprimir, pero no tengo diseño ¿Que hago?</h3>
+					<p>Si no tienes diseño propio puedes contratar un diseñador gráfico con experiencia en impresiones gráficas. En crea publicidad hemos creado nuestra área especializada en <a href="https://www.creativaweb.cl/">diseño gráfico</a>, aquí puedes cotizar un servicio para luego ser enviado a la imprenta.</p>
+					<h3>¿Cuáles impresiones están disponibles en la imprenta?</h3>
+					<p>Nuestra imprenta está equipada con máquinas de última generación y trabajamos con las mejores marcas del mercado. Logrando así que nuestras tiradas de impresión salgan con la mejor calidad en color, corte y terminaciones. A continuación te dejamos nuestros tipos de impresión disponibles.</p>
+					<h2>Impresión digital</h2>
+					<p>Con la impresión digital usted puede imprimir tandas de 300 a 500 piezas gráficas, ideal para negocios en crecimiento. Aquí puede imprimir flyers, posters, trípticos.</p>
+					<h2>Impresión offset</h2>
+					<p>Si los requerimientos son de alta demanda y puedes cotizar impresiones de 10.000 a 100.000 piezas gráficas. Ideal para grandes corporaciones o empresas con varias sucursales a nivel nacional.</p>
+					<h3>Láser, color, uv, sublimacion y serigrafia</h3>
+					<p>También incluimos nuevas y antiguas técnicas de impresión para quienes lo soliciten. Podemos imprimir desde papel, telas y objetos como lápices, vasos y credenciales.</p>
+					<p>Puedes revisar la <a href="https://www.creapublicidad.cl/tienda-imprenta/">tienda de la imprenta</a> y luego cotizar con nuestros vendedores y pedir la asesoría o técnica de impresión de preferencia <a href="https://www.creapublicidad.cl/contacto/">aquí</a>.</p>
+					<h3>Realizan pruebas de color antes de imprimir una tanda completa</h3>
+					<p>Si, previa cotización y compromiso de compra de la cotización. Nuestras máquinas van a intentar llegar al color maximo que usted nos trae, de igual manera si tiene dudas porque su diseño tiene muchos colores, sombras, degradados y texturas digitales, le recomendamos hacer una prueba de color.</p>
+				</div>
+			</section>
+
 		</div>
 	</div>
 {% endblock %}

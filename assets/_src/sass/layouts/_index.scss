@@ -1,3 +1,80 @@
 @forward 'header';
 @forward 'footer';
 @forward 'sidebar';
+
+.home-container {
+	max-width: 1600px;
+	p {
+		font-size: 17px;
+		line-height: 1.7em;
+		color: #000;
+		a {
+			color: #606060;
+			text-decoration: none;
+		}
+	}
+	#ventajas-imprenta {
+		h2 {
+			color: #000;
+			font-size: 30px;
+			font-weight: 700;
+		}
+		h3 {
+			font-size: 20px;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			color: #000;
+			.icon {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 60px;
+				color: #7900ff;
+				margin: 0 20px 0 0;
+				svg {
+					width: 1em;
+					height: 1em;
+					vertical-align: top;
+					fill: currentColor;
+					stroke: currentColor;
+					overflow: visible;
+				}
+			}
+			p {
+				display: inline-block;
+				color: #000;
+			}
+		}
+		p {
+			font-weight: 300;
+		}
+	}
+	#nuestra-imprenta {
+		p {
+			font-weight: 300;
+		}
+		h2 {
+			color: #000;
+			font-size: 32px;
+			font-weight: 700;
+		}
+		h3 {
+			font-size: 16px;
+			font-weight: 500;
+			color: #000;
+		}
+	}
+	#beneficios-imprenta {
+		h2 {
+			font-size: 17px;
+			font-weight: 500;
+			color: #6f00b7;
+		}
+		h3 {
+			font-size: 16px;
+			font-weight: 500;
+			color: #6f00b7;
+		}
+	}
+}

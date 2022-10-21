@@ -1,43 +1,43 @@
 <footer class="site-footer" id="colophon">
     <div id="footer-top" class="py-9 bg-zinc-800">
         <div class="container mx-auto">
-            <div class="grid grid-cols-4 gap-4">
-                <div class="px-6 pb-6 border-r border-neutral-600">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="px-6 pb-6 lg:border-r border-neutral-600">
                     <h5 class="text-white text-2xl font-light pb-8">Productos</h5>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="text-gray-300 text-lg mb-0">
                         {% for item in footer_menu_1.items %}
-                            <li class="nav-main-item {{ item.classes|join(' ') }}">
-                                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                            <li class="pb-3 {{ item.classes|join(' ') }}">
+                                <a href="{{ item.link }}" class="hover:text-white">{{ item.title }}</a>
                             </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="px-6 pb-6 border-r border-neutral-600">
+                <div class="px-6 pb-6 lg:border-r border-neutral-600">
                     <h5 class="text-white text-2xl font-light pb-8">Información</h5>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="text-gray-300 text-lg mb-0">
                         {% for item in footer_menu_2.items %}
-                            <li class="nav-main-item {{ item.classes|join(' ') }}">
-                                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                            <li class="pb-3 {{ item.classes|join(' ') }}">
+                                <a href="{{ item.link }}" class="hover:text-white">{{ item.title }}</a>
                             </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="px-6 pb-6 newsletter border-r border-neutral-600">
+                <div class="px-6 pb-6 newsletter lg:border-r border-neutral-600">
                     <h5 class="text-white text-2xl font-light pb-8">Newsletter</h5>
-                    <span class="text-gray-300 text-base">Ingresa tu correo y recibe todas nuestras ofertas.</span>
+                    <span class="text-gray-300 text-lg">Ingresa tu correo y recibe todas nuestras ofertas.</span>
                 </div>
                 <div class="px-6 pb-6 contacto">
                     <h5 class="text-white text-2xl font-light pb-8">Contacto</h5>
-                    <span class="text-gray-300 text-base">Envios a todo Chile</span>
-                    <ul class="list-unstyled text-gray-300 mt-3 mb-0">
-                        <li>
-                            <a href="tel:+562 2952 0966">
-                                <i class="fas fa-phone-alt"></i> +562 2952 0966
+                    <span class="text-gray-300 text-lg">Envios a todo Chile</span>
+                    <ul class="text-gray-300 text-lg mt-3 mb-0">
+                        <li class="pb-3">
+                            <a href="tel:+562 2952 0966" class="hover:text-white">
+                                <i class="text-xl text-white mr-2 fas fa-phone-alt"></i> +562 2952 0966
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:ventas@creapublicidad.cl">
-                                <i class="fas fa-envelope"></i> ventas@creapublicidad.cl
+                            <a href="mailto:ventas@creapublicidad.cl" class="hover:text-white">
+                                <i class="text-xl text-white mr-2 fas fa-envelope"></i> ventas@creapublicidad.cl
                             </a>
                         </li>
                     </ul>
