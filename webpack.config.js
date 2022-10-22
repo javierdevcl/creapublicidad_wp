@@ -25,9 +25,5 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js'],
     },
-    plugins: [
-        new ESLintPlugin({
-            extensions: ['.js', '.ts'],
-        }),
-    ],
+    plugins: [],
 };
