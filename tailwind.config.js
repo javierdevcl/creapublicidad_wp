@@ -7,6 +7,7 @@ module.exports = {
       "./node_modules/flowbite/**/*.js"
     ],
     theme: {
+      extend: {},
       screens: {
         '2xl': '1690px',
       }

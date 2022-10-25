@@ -17,14 +17,14 @@
 
 @media (min-width: 1024px) {
 	.menu .menu-item-has-children ul.sub-menu {
-		@apply absolute bg-white pt-6 pb-3 px-3 shadow-2xl min-w-[200px] left-0 border-b
-		border-b-gray-200 z-10 transition-all duration-200 ease-in-out translate-y-5
+		@apply absolute bg-white shadow-2xl min-w-[240px] left-0 border-b
+		border-b-gray-200 z-10 transition-all ease-in-out translate-y-5
 		opacity-0 pointer-events-none;
 	}
 }
 
 .menu .menu-item-has-children ul.sub-menu li {
-	@apply w-full;
+	@apply w-full pt-2 pb-2 px-3;
 }
 
 @media (max-width: 1024px) {
@@ -55,5 +55,5 @@
 }
 
 .menu .menu-item-has-children:hover > ul.sub-menu {
-	@apply flex translate-y-0 opacity-100 pointer-events-auto
+	@apply block translate-y-0 opacity-100 pointer-events-auto
 }
