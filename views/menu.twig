@@ -1,9 +1,9 @@
-{% if menu %}
-	<ul>
+{% if main_menu %}
+	<ul class="menu flex items-center text-sm xl:text-base space-x-4 xl:space-x-8 font-bold">
 	{% for item in items %}
 		<li class="{{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'items': item.children} %}
+			{% include "submenu.twig" with {'items': item.children} %}
 		</li>
 	{% endfor %}
 	</ul>

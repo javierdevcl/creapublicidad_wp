@@ -21,7 +21,6 @@ class Theme extends Site
 
     public function add_menus()
     {
-        register_nav_menu('top_menu', __('Menu du haut'));
         register_nav_menu('main_menu', __('Menu principal'));
         register_nav_menu('footer_menu_1', __('Menu Footer 1'));
         register_nav_menu('footer_menu_2', __('Menu Footer 2'));
@@ -59,7 +58,7 @@ class Theme extends Site
 
     public function add_to_context($context)
     {
-        $menu_slugs = ['top_menu', 'main_menu', 'footer_menu_1', 'footer_menu_2'];
+        $menu_slugs = ['main_menu', 'footer_menu_1', 'footer_menu_2'];
 
         foreach ($menu_slugs as $menu_slug) {
             $context[$menu_slug] = new Menu($menu_slug);

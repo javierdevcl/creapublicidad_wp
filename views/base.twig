@@ -15,81 +15,39 @@
 						<div class="flex items-center">
 							<i class="fa fa-bars text-2xl mr-6" aria-hidden="true"></i>
 							<a href="{{site.url}}">
-								<img src="{{custom_logo_url}}" class="h-9 sm:h-11" alt="Logotipo CreaPublicidad">
+								<img src="{{custom_logo_url}}" class="h-11" alt="Logotipo CreaPublicidad">
 							</a>
-							<a href="#" class="ml-10 font-semibold">Productos</a>
+							<a href="#" class="ml-10 text-base font-bold">Productos</a>
 						</div>
 						<div class="flex items-center">
-							<form id="search-form" class="hidden mr-3 w-full lg:inline-block">
-								<label for="search-bar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">¿Qué estas buscando?</label>
-								<div class="relative">
-									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-										<svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-									</div>
-									<input type="search" id="search-bar" class="block py-2 px-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="¿Qué estas buscando?" required>
+							<form id="search" class="flex items-center">
+								<label for="simple-search" class="sr-only">Search</label>
+								<div class="relative w-full">
+									<input type="text" id="simple-search" class="bg-zinc-100 border-none text-sm placeholder-black font-bold rounded-l-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-3" placeholder="¿Qué estas buscando?" required>
 								</div>
+								<button type="submit" class="p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+									<span class="sr-only">Search</span>
+								</button>
 							</form>
 						</div>
 						<div class="flex items-center">
-							<a href="#">Ayuda y contacto</a>
-							<a href="#">Mi Cuenta y cotizaciones</a>
+							<a href="#" class="text-sm">
+								<strong>Ayuda</strong> <br>y contacto
+							</a>
+							<span class="w-px h-10 mx-5 border-r border-zinc-300"></span>
+							<a href="#" class="text-sm">
+								<strong>Mi Cuenta</strong> <br>y cotizaciones
+							</a>
 						</div>
 					</div>
 				</div>
-				<nav id="nav-main" class="nav-main" role="navigation">
-					{% include "menu.twig" with {'items': menu.get_items} %}
-				</nav><!-- #nav -->
 				<nav class="bg-gray-50 dark:bg-gray-700">
 					<div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
 						<div class="flex items-center">
-							<ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
-								<li>
-									<a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
-								</li>
-								<li>
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
-								</li>
-								<li>
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
-								</li>
-								<li>
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
-								</li>
-								<li class="hidden md:inline">
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Marketplace</a>
-								</li>
-								<li class="hidden md:inline">
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Resources</a>
-								</li>
-								<li class="hidden md:inline">
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Forum</a>
-								</li>
-								<li class="hidden md:inline">
-									<a href="#" class="text-gray-900 dark:text-white hover:underline">Support</a>
-								</li>
-							</ul>
-							<button id="dropdownDefault" data-dropdown-toggle="dropdown" data-dropdown-placement="bottom" class="text-gray-500 md:hidden dark:hover:bg-gray-600 dark:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-1.5">
-								<svg class="w-5 h-5 text-gray-700 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
-							</button>
-							<div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-								<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-									<li>
-										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Marketplace</a>
-									</li>
-									<li>
-										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-									</li>
-									<li>
-										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Resources</a>
-									</li>
-									<li>
-										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forum</a>
-									</li>
-									<li>
-										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
-									</li>
-								</ul>
-							</div>
+							<nav class="list-none pt-2 lg:flex">
+								{% include "menu.twig" with {'items': main_menu.get_items} %}
+							</nav>
 						</div>
 					</div>
 				</nav>
