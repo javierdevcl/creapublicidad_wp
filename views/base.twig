@@ -8,45 +8,91 @@
 
 	<body class="{{body_class}}" data-template="base.twig">
 
-	<div class="w-screen h-screen flex items-center justify-center">
-		<div onclick="toggleSlideover()" class="cursor-pointer px-5 py-2 text-sm border text-gray-500 hover:bg-gray-100 rounded border-gray-300">Toggle Slide-over</div>
-		<div id="slideover-container" class="w-full h-full fixed inset-0 invisible">
-			<div onclick="toggleSlideover()" id="slideover-bg" class="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-gray-900 opacity-0"></div>
-			<div onclick="toggleSlideover()" id="slideover" class="w-96 bg-white h-full absolute right-0 duration-300 ease-out transition-all translate-x-full">
-				<div class="absolute cursor-pointer text-gray-600 top-0 w-8 h-8 flex items-center justify-center right-0 mt-5 mr-5">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-				</div>
-			</div>
-		</div>
-	</div>
-
 		<header class="header">
 			{% block header %}
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<i class="fa fa-bars" aria-hidden="true"></i>
+				<div class="bg-white">
+					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-4 md:px-6 py-5">
+						<div class="flex items-center">
+							<i class="fa fa-bars text-2xl mr-6" aria-hidden="true"></i>
 							<a href="{{site.url}}">
-								<img src="{{custom_logo_url}}" alt="Logotipo CreaPublicidad">
+								<img src="{{custom_logo_url}}" class="h-9 sm:h-11" alt="Logotipo CreaPublicidad">
 							</a>
-							<a href="#">Productos</a>
+							<a href="#" class="ml-10 font-semibold">Productos</a>
 						</div>
-						<div class="col-md-6">
-							<input type="search" placeholder="¿Qué estas buscando?" value="" name="s">
+						<div class="flex items-center">
+							<form id="search-form" class="hidden mr-3 w-full lg:inline-block">
+								<label for="search-bar" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">¿Qué estas buscando?</label>
+								<div class="relative">
+									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+										<svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+									</div>
+									<input type="search" id="search-bar" class="block py-2 px-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="¿Qué estas buscando?" required>
+								</div>
+							</form>
 						</div>
-						<div class="col-md-3">
-							<a href="#">
-								Ayuda y contacto
-							</a>
-							<a href="#">
-								Mi Cuenta y cotizaciones
-							</a>
+						<div class="flex items-center">
+							<a href="#">Ayuda y contacto</a>
+							<a href="#">Mi Cuenta y cotizaciones</a>
 						</div>
 					</div>
 				</div>
 				<nav id="nav-main" class="nav-main" role="navigation">
 					{% include "menu.twig" with {'items': menu.get_items} %}
 				</nav><!-- #nav -->
+				<nav class="bg-gray-50 dark:bg-gray-700">
+					<div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
+						<div class="flex items-center">
+							<ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
+								<li>
+									<a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+								</li>
+								<li>
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
+								</li>
+								<li>
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
+								</li>
+								<li>
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+								</li>
+								<li class="hidden md:inline">
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Marketplace</a>
+								</li>
+								<li class="hidden md:inline">
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Resources</a>
+								</li>
+								<li class="hidden md:inline">
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Forum</a>
+								</li>
+								<li class="hidden md:inline">
+									<a href="#" class="text-gray-900 dark:text-white hover:underline">Support</a>
+								</li>
+							</ul>
+							<button id="dropdownDefault" data-dropdown-toggle="dropdown" data-dropdown-placement="bottom" class="text-gray-500 md:hidden dark:hover:bg-gray-600 dark:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-1.5">
+								<svg class="w-5 h-5 text-gray-700 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+							</button>
+							<div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+								<ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+									<li>
+										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Marketplace</a>
+									</li>
+									<li>
+										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+									</li>
+									<li>
+										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Resources</a>
+									</li>
+									<li>
+										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forum</a>
+									</li>
+									<li>
+										<a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
 			{% endblock %}
 		</header>
 
@@ -59,7 +105,6 @@
 				{% include 'footer.twig' %}
 			</footer>
 			<script src="https://kit.fontawesome.com/a50e9432f4.js" crossorigin="anonymous"></script>
-			<script src="{{ site.theme.link }}/assets/dist/app.js"></script>
 			<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 			<script src="{{ site.theme.link }}/assets/dist/owl.carousel.min.js"></script>
 			<script>
