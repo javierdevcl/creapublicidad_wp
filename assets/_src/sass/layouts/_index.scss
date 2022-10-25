@@ -2,8 +2,22 @@
 @forward 'footer';
 @forward 'sidebar';
 
+#marque-home {
+	h1 {
+		font-size: 17px;
+		font-weight: 300;
+		display: inline-block;
+		margin: 0 20px;
+		color: #fff;
+	}
+	span {
+		display: inline-block;
+		margin: 0 20px;
+	}
+}
+
 .home-container {
-	max-width: 1600px;
+	max-width: 1560px;
 	p {
 		font-size: 17px;
 		line-height: 1.7em;
