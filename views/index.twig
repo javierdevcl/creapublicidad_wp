@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
 	<div class="container-slider mx-auto">
-		<div class="grid grid-cols-[1262px_minmax(457px,_1fr)_100px]">
+		<div class="grid grid-cols-[72.5%_26%] gap-7 py-5">
 			<div>
 				<div class="owl-carousel owl-slider">
 					{% for image in options.slider %}
@@ -18,17 +18,17 @@
 		</div>
 	</div>
 	<section id="marque-home" class="bg-black">
-		<div class="max-w-screen-2xl mx-auto py-1.5 px-3 text-white">
+		<div class="container-slider mx-auto py-1.5 text-white">
 			<marquee class="align-middle"><h1>Imprenta digital y offset en Santiago</h1> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span></marquee>
 		</div>
 	</section>
-	<div class="container mx-auto home-container-top owl-home">
-		<h2 class="text-center text-4xl	font-bold pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black">Destacados</span>🔥</h2>
+	<div class="container-slider mx-auto owl-home">
+		<h2 class="text-center text-4xl	font-bold pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
 		<div class="owl-carousel owl-productos">
 			{% for post in top_selling %}
 				<div class="producto-item">
 					<a href="{{ post.link }}">
-						<div class="product-image mb-2.5 rounded-t-lg">
+						<div class="product-image mb-2.5 px-2 rounded-t-lg">
 							<img src="{{ post.thumbnail.src('shop_single') }}" />
 						</div>
 						<h5 class="text-base text-center uppercase font-semibold">{{ post.title }}</h5>
