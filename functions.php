@@ -58,3 +58,4 @@ function disable_emojis_tinymce( $plugins ) {
 }
 
 require_once(__DIR__ . '/includes/setup.php');
+require_once(__DIR__ . '/includes/options-page.php');

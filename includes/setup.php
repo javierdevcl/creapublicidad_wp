@@ -80,7 +80,8 @@ class Theme extends Site
 
 	public function wp_enqueue_scripts()
 	{
- 		wp_enqueue_style( 'bathe-main', get_theme_file_uri( 'assets/css/main.css' ) );
+ 		//wp_enqueue_style( 'bathe-main', get_theme_file_uri( 'assets/css/main.css' ) );
+		wp_enqueue_style( 'bathe-main', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
 		wp_enqueue_style( 'tailwind-main', get_stylesheet_directory_uri() . '/assets/css/tailwind.css', array(), filemtime( get_stylesheet_directory() . '/assets/css/tailwind.css' ) );
 		wp_enqueue_style( 'owl-carousel', get_theme_file_uri( 'assets/dist/owl.carousel.min.css' ) );
 
