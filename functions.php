@@ -10,10 +10,6 @@ if ( file_exists( $composer_autoload ) ) {
 	$timber = new Timber\Timber();
 }
 
-if ( class_exists( 'WooCommerce' ) ) {
-	Timber\Integrations\WooCommerce\WooCommerce::init();
-}
-
 if ( ! class_exists( 'Timber' ) ) {
 
     add_action(
@@ -65,3 +61,4 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 require_once(__DIR__ . '/includes/setup.php');
 require_once(__DIR__ . '/includes/options-page.php');
+require_once(__DIR__ . '/includes/woocommerce.php');
