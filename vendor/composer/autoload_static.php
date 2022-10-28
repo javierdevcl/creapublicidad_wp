@@ -16,6 +16,7 @@ class ComposerStaticInitd4148914b7ec24316ae0ca44367d132a
         'T' => 
         array (
             'Twig\\' => 5,
+            'Timber\\Integrations\\WooCommerce\\' => 32,
             'Timber\\' => 7,
         ),
         'S' => 
@@ -34,6 +35,10 @@ class ComposerStaticInitd4148914b7ec24316ae0ca44367d132a
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Timber\\Integrations\\WooCommerce\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mindkomm/timber-integration-woocommerce/lib',
         ),
         'Timber\\' => 
         array (

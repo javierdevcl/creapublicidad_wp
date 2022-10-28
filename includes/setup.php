@@ -54,6 +54,10 @@ class Theme extends Site
             )
         );
         add_theme_support( 'menus' );
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
     }
 
     public function add_to_context($context)
