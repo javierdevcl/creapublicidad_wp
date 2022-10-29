@@ -133,6 +133,7 @@ div.images {
 
 	&.woocommerce-product-gallery {
 		position: relative;
+		background: #f9f9f9;
 	}
 
 	.woocommerce-product-gallery__wrapper {
@@ -240,5 +241,37 @@ div.images {
 
 	.flex-control-thumbs li:nth-child(5n+1) {
 		clear: left;
+	}
+}
+.single-product {
+	.quantity {
+		width: 100%;
+		display: none !important;
+	}
+	.yith-ywraq-add-to-quote {
+		display: block!important;
+		width: 100%;
+		float: right;
+		line-height: 20px!important;
+	}
+	.add-request-quote-button {
+		width: auto;
+		font-size: 15px;
+		padding: 8px 12px;
+		float: right!important;
+	}
+	.add-request-quote-button {
+		width: 100%!important;
+		max-width: 450px;
+		font-size: 18px!important;
+		font-weight: 500;
+		text-transform: uppercase;
+		border: 0;
+		border-radius: 0;
+		background: #47b5ff!important;
+		color: #fff!important;
+		padding: 15px 20px!important;
+		border: 0!important;
+		text-align: center;
 	}
 }

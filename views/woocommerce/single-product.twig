@@ -5,7 +5,7 @@
 		<div class="text-xs font-light mb-3">
 			{% do wc_action('woocommerce_before_main_content') %}
 		</div>
-		<h1 class="text-2xl	text-black font-semibold border-b pb-1.5">{{ post.title }}</h1>
+		<h1 class="text-2xl	text-black font-semibold border-b pb-1.5 mb-4">{{ post.title }}</h1>
 		{##
 		 # Hook: woocommerce_before_single_product.
 		 #
@@ -14,7 +14,7 @@
 		{% do wc_action('woocommerce_before_single_product') %}
 
 		<div id="product-{{ post.id }}" {{ fn('wc_product_class') }}>
-			<div class="grid grid-cols-2 py-2">
+			<div class="grid grid-cols-[52%_48%] py-2">
 				<div>
 				{##
 				 # Hook: woocommerce_before_single_product_summary.
@@ -24,7 +24,7 @@
 				#}
 				{% do wc_action('woocommerce_before_single_product_summary') %}
 				</div>
-				<div>
+				<div class="px-7">
 					<div class="summary entry-summary">
 						<h4 class="text-xl border-b py-1 mb-6">Cotiza tu Producto</h4>
 						{##
@@ -39,7 +39,11 @@
 						 # @hooked woocommerce_template_single_sharing - 50
 						 # @hooked WC_Structured_Data::generate_product_data() - 60
 						#}
-						{% do wc_action('woocommerce_single_product_summary') %}
+						<div class="px-5">
+							{% do wc_action('woocommerce_single_product_summary') %}
+							<a href="#" class="w-full max-w-[450px] bg-black text-white text-lg text-center font-medium uppercase inline-block float-right p-3">Cotizar por WhatsApp</a>
+							<a href="#" class="w-full max-w-[450px] bg-black text-white text-lg text-center font-medium uppercase inline-block float-right p-3">Contactanos Ahora</a>
+						</div>
 					</div>
 				</div>
 			</div>
