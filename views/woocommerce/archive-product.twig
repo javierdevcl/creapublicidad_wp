@@ -1,65 +1,66 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-	<div class="bg-[#9b00ff] py-3">
+	<div class="bg-[#9b00ff] py-4">
 		<div class="container mx-auto">
-			{% do wc_action('woocommerce_before_main_content') %}
-			<div class="grid grid-cols-2">
-				<div></div>
-				<div>
+			<div class="text-xs	text-white font-normal px-3">
+				{% do wc_action('woocommerce_before_main_content') %}
+			</div>
+			<div class="grid grid-cols-5 py-2">
+				<div class="col-span-3">
+					<img src="{{ Image(term.meta('imagen-categoria')).src }}" class="w-3/5 m-auto" />
+				</div>
+				<div class="col-span-2 self-center">
 					{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
-						<h1 class="woocommerce-products-header__title page-title">{{ title }}</h1>
+						<h1 class="text-[40px] text-white font-bold uppercase">{{ title }}</h1>
 					{% endif %}
-					{{ term.meta('prueba') }}
+					<div class="text-base text-white font-normal">
+						{{ term.meta('titulo-descripcion') }}
+					</div>
+					<ul class="text-lg text-white space-y-2">
+						<li>
+							<div class="text-xl inline-block pr-1">
+								<i aria-hidden="true" class="fad fa-check-circle"></i>
+							</div>
+							{{ term.meta('destacado-1') }}
+						</li>
+						<li>
+							<div class="text-xl inline-block pr-1">
+								<i aria-hidden="true" class="fad fa-check-circle"></i>
+							</div>
+							{{ term.meta('_426') }}
+						</li>
+						<li>
+							<div class="text-xl inline-block pr-1">
+								<i aria-hidden="true" class="fad fa-check-circle"></i>
+							</div>
+							{{ term.meta('_924') }}
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-    {##
-     # woocommerce_before_main_content hook.
-     #
-     # @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-     # @hooked woocommerce_breadcrumb - 20
-     # @hooked WC_Structured_Data::generate_website_data() - 30
-     #}
-    <header class="woocommerce-products-header">
-
-
-        {##
-         # Hook: woocommerce_archive_description.
-         #
-         # @hooked woocommerce_taxonomy_archive_description - 10
-         # @hooked woocommerce_product_archive_description - 10
-         #}
-        {% do wc_action('woocommerce_archive_description') %}
-    </header>
-
     {% if fn('woocommerce_product_loop') %}
-        {#
-         # woocommerce_before_shop_loop hook.
-         #
-         # @hooked woocommerce_output_all_notices - 10
-         # @hooked woocommerce_result_count - 20
-         # @hooked woocommerce_catalog_ordering - 30
-         #}
-        {% do wc_action('woocommerce_before_shop_loop') %}
+		<div class="bg-[#f2f2f2] py-6">
+			<div class="container-productos mx-auto">
+				<ul class="grid grid-cols-4 gap-6">
+				{% if fn('wc_get_loop_prop', 'total') %}
+					{% for post in posts %}
+						{##
+						 # Depending on your WooCommerce display settings, the
+						 # `woocommerce_product_subcategories` function might reset the $wp_query global. By
+						 # calling `have_posts()`, we check if there are posts we can display.
+						 #}
+						{% if fn('have_posts') %}
+							{{ fn('wc_get_template_part', 'content', 'product' ) }}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
 
-	    {{ fn('woocommerce_product_loop_start') }}
-
-        {% if fn('wc_get_loop_prop', 'total') %}
-            {% for post in posts %}
-	            {##
-	             # Depending on your WooCommerce display settings, the
-	             # `woocommerce_product_subcategories` function might reset the $wp_query global. By
-	             # calling `have_posts()`, we check if there are posts we can display.
-	             #}
-	            {% if fn('have_posts') %}
-                    {{ fn('wc_get_template_part', 'content', 'product' ) }}
-	            {% endif %}
-            {% endfor %}
-        {% endif %}
-
-	    {{ fn('woocommerce_product_loop_end') }}
+				</ul>
+			</div>
+		</div>
 
         {##
          # woocommerce_after_shop_loop hook.
@@ -83,11 +84,16 @@
      # @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
      #}
     {% do wc_action('woocommerce_after_main_content') %}
+	<header class="woocommerce-products-header">
 
-    {#
-     # woocommerce_sidebar hook.
-     #
-     # @hooked woocommerce_get_sidebar - 10
-     #}
-    {% do wc_action('woocommerce_sidebar') %}
+
+		{##
+         # Hook: woocommerce_archive_description.
+         #
+         # @hooked woocommerce_taxonomy_archive_description - 10
+         # @hooked woocommerce_product_archive_description - 10
+		#}
+		{% do wc_action('woocommerce_archive_description') %}
+	</header>
+
 {% endblock %}
