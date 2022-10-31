@@ -268,3 +268,16 @@ div.images {
 		text-align: center;
 	}
 }
+
+@media (max-width: 640px) {
+	.home-container {
+		p {
+			font-size: 15px;
+		}
+		#nuestra-imprenta {
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}
+}
