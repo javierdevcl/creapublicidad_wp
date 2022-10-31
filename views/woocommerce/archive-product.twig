@@ -43,7 +43,7 @@
 	</div>
     {% if fn('woocommerce_product_loop') %}
 		<div class="bg-[#f2f2f2] py-6">
-			<div class="container-productos mx-auto">
+			<div class="max-w-[1600px] mx-auto">
 				<ul class="grid grid-cols-4 gap-6">
 				{% if fn('wc_get_loop_prop', 'total') %}
 					{% for post in posts %}

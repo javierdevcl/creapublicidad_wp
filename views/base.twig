@@ -12,19 +12,19 @@
 			{% block header %}
 				<div class="bg-white">
 					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-4 md:px-6 py-5">
-						<div class="flex items-center">
+						<div class="flex w-3/6 md:w-1/6 order-1 items-center">
 							<button class="mr-6 leading-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
 								<i class="fa fa-bars text-2xl" aria-hidden="true"></i>
 							</button>
 							<a href="{{site.url}}">
 								<img src="{{custom_logo_url}}" class="h-11" alt="Logotipo CreaPublicidad">
 							</a>
-							<button class="ml-10 text-base font-bold leading-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+							<button class="ml-10 text-base font-bold leading-none hidden lg:block" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
 								Productos
 							</button>
 						</div>
-						<div class="flex items-center">
-							<form id="search" class="flex items-center">
+						<div class="flex w-full md:w-2/6 order-3 md:order-2 mt-3 md:mt-0 items-center">
+							<form id="search" class="flex items-center m-auto">
 								<label for="simple-search" class="sr-only">Search</label>
 								<div class="relative w-full">
 									<input type="text" id="simple-search" class="bg-zinc-100 border-none text-sm placeholder-black font-bold rounded-l-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-3" placeholder="¿Qué estas buscando?" required>
@@ -35,18 +35,27 @@
 								</button>
 							</form>
 						</div>
-						<div class="flex items-center">
-							<a href="#" class="text-sm">
+						<div class="flex order-2 md:order-3 items-center">
+							<a href="#" class="text-2xl block lg:hidden">
+								<i aria-hidden="true" class="far fa-phone-volume"></i>
+							</a>
+							<a href="" class="text-2xl ml-5 block lg:hidden">
+								<i aria-hidden="true" class="fas fa-user-alt"></i>
+							</a>
+							<a href="#" class="text-sm hover:text-violet-600 hidden lg:block">
 								<strong>Ayuda</strong> <br>y contacto
 							</a>
-							<span class="w-px h-10 mx-5 border-r border-zinc-300"></span>
-							<a href="#" class="text-sm">
+							<span class="w-px h-10 mx-5 border-r border-zinc-300 hidden lg:block"></span>
+							<a href="#" class="text-sm hover:text-violet-600 hidden lg:block">
 								<strong>Mi Cuenta</strong> <br>y cotizaciones
+							</a>
+							<a href="" class="ml-5 lg:ml-6 text-xl hover:text-violet-600">
+								<i aria-hidden="true" class="fas fa-shopping-cart"></i>
 							</a>
 						</div>
 					</div>
 				</div>
-				<nav id="menu-principal" class="relative">
+				<nav id="menu-principal" class="relative hidden lg:block">
 					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-14 md:px-6">
 						<div class="flex items-center list-none">
 							{% include "menu.twig" with {'items': main_menu.get_items} %}
@@ -65,7 +74,7 @@
 				{% include 'footer.twig' %}
 			</footer>
 
-			<div id="drawer-navigation" class="fixed z-40 h-screen overflow-y-auto bg-white w-[450px]" tabindex="-1" aria-labelledby="drawer-navigation-label">
+			<div id="drawer-navigation" class="fixed z-40 h-screen overflow-y-auto bg-white w-full md:w-[450px]" tabindex="-1" aria-labelledby="drawer-navigation-label">
 				<button type="button" data-drawer-dismiss="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
 					<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 					<span class="sr-only">Close menu</span>
