@@ -23,26 +23,26 @@
 		</div>
 	</section>
 	<div class="container-slider mx-auto owl-home">
-		<h2 class="text-center text-4xl	font-bold pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
-		<div class="owl-carousel owl-productos">
+		<h2 class="text-center text-xl sm:text-4xl font-bold pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
+		<div class="owl-carousel owl-loaded owl-drag owl-productos">
 			{% for post in top_selling %}
-				<div class="producto-item">
+				<div class="producto-item px-1 md:px-0">
 					<a href="{{ post.link }}">
 						<div class="product-image mb-2.5 px-2 rounded-t-lg">
 							<img src="{{ post.thumbnail.src('shop_single') }}" />
 						</div>
-						<h5 class="text-base text-center uppercase font-semibold">{{ post.title }}</h5>
+						<h5 class="text-xs md:text-base text-center uppercase font-semibold">{{ post.title }}</h5>
 					</a>
-					<div class="text-xs text-center text-neutral-500 font-normal leading-5">{{ post.preview.length(16).force.read_more('') }}</div>
-					<a href="{{ post.link }}" class="boton-cotizar text-center text-base w-full max-w-[200px] mx-auto table uppercase font-semibold border-2 rounded-2xl py-2.5 px-5 my-3 text-violet-600 border-violet-600 hover:bg-violet-600 hover:text-white">Cotizar Ahora</a>
+					<div class="text-xs text-center text-neutral-500 font-normal leading-5 hidden md:block">{{ post.preview.length(16).force.read_more('') }}</div>
+					<a href="{{ post.link }}" class="boton-cotizar text-center text-xs md:text-base w-4/5 md:w-full max-w-[200px] mx-auto table uppercase font-semibold border-2 rounded-2xl py-1.5 md:py-2.5 px-1 md:px-5 my-3 text-violet-600 border-violet-600 hover:bg-violet-600 hover:text-white">Cotizar Ahora</a>
 				</div>
 			{% endfor %}
 		</div>
 	</div>
 	<div class="mx-auto home-container">
-			<section id="ventajas-imprenta" class="pt-20 pb-2 px-5">
+			<section id="ventajas-imprenta" class="pt-8 md:pt-20 pb-2 px-5">
 				<div class="grid grid-cols-1">
-					<h2 class="text-center pb-11">Ventajas de la impresión online con CreaPublicidad</h2>
+					<h2 class="text-center pb-8 md:pb-11">Ventajas de la impresión online con CreaPublicidad</h2>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20">
 						<div class="pb-5">
 							<h3 class="mb-5">
