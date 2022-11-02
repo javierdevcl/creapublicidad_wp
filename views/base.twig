@@ -27,9 +27,9 @@
 							<form id="search" class="flex items-center m-auto">
 								<label for="simple-search" class="sr-only">Search</label>
 								<div class="relative w-full">
-									<input type="text" id="simple-search" class="bg-zinc-100 border-none text-sm placeholder-black font-bold rounded-l-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-3" placeholder="¿Qué estas buscando?" required>
+									<input type="text" id="simple-search" class="bg-zinc-100 border-none focus:border-transparent focus:ring-0 text-sm placeholder-black font-bold rounded-l-3xl block w-full pl-5 md:pl-7 p-3.5 md:p-3" placeholder="¿Qué estas buscando?" required>
 								</div>
-								<button type="submit" class="p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+								<button type="submit" class="p-3.5 md:p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none">
 									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 									<span class="sr-only">Search</span>
 								</button>
@@ -147,7 +147,7 @@
 				$(document).ready(function() {
 					$('.owl-categorias').owlCarousel({
 						margin: 10,
-						nav: true,
+						nav: false,
 						center: false,
 						dots: false,
 						autoplay: true,
@@ -219,6 +219,42 @@
 							1450: {
 								items: 4,
 								margin: 35
+							}
+						}
+					})
+
+					$('.owl-relacionados').owlCarousel({
+						loop: true,
+						margin: 0,
+						nav: false,
+						center: false,
+						dots: false,
+						autoplay: true,
+						autoplayTimeout: 6000,
+						autoplayHoverPause: false,
+						responsive: {
+							0: {
+								items: 1,
+								margin: 10,
+								center: true,
+								loop: true
+							},
+							480: {
+								items: 2,
+								margin: 8,
+								loop: true
+							},
+							767: {
+								items: 4,
+								margin: 8
+							},
+							1140: {
+								items: 4,
+								margin: 10
+							},
+							1450: {
+								items: 4,
+								margin: 12
 							}
 						}
 					})

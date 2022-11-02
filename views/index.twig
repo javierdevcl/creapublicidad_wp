@@ -1,12 +1,12 @@
 {% extends "base.twig" %}
 {% block content %}
 	<div class="block md:hidden">
-		<div class="owl-carousel owl-categorias">
+		<div class="owl-carousel owl-categorias mb-2">
 		{% for categories in category %}
 			{% if categories.meta('thumbnail_id') %}
 				<div class="categoria-item">
-					<img src="{{ Image(categories.meta('thumbnail_id')) }}" class="border rounded-full shadow-md p-2" />
-					<h5 class="text-[7px] text-center">{{ categories.title }}</h5>
+					<img src="{{ Image(categories.meta('thumbnail_id')) }}" class="border rounded-full shadow-md p-1" />
+					<h5 class="text-[7px] text-center font-semibold	mt-1 px-3">{{ categories.title }}</h5>
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -56,12 +56,12 @@
 				<div class="producto-item px-1 md:px-0">
 					<a href="{{ post.link }}">
 						<div class="product-image mb-2.5 px-2 rounded-t-lg">
-							<img src="{{ post.thumbnail.src('shop_single') }}" />
+							<img src="{{ post.thumbnail.src('shop_single') }}" class="scale-90 duration-300" />
 						</div>
 						<h5 class="text-xs md:text-base text-center uppercase font-semibold">{{ post.title }}</h5>
 					</a>
 					<div class="text-xs text-center text-neutral-500 font-normal leading-5 hidden md:block">{{ post.preview.length(16).force.read_more('') }}</div>
-					<a href="{{ post.link }}" class="boton-cotizar text-center text-xs md:text-base w-4/5 md:w-full max-w-[200px] mx-auto table uppercase font-semibold border-2 rounded-2xl py-1.5 md:py-2.5 px-1 md:px-5 my-3 text-violet-600 border-violet-600 hover:bg-violet-600 hover:text-white">Cotizar Ahora</a>
+					<a href="{{ post.link }}" class="boton-cotizar text-center text-xs md:text-base w-4/5 md:w-full max-w-[200px] mx-auto table uppercase font-semibold border-2 rounded-2xl py-1.5 md:py-2.5 px-1 md:px-5 my-3 text-violet-600 border-violet-600 hover:bg-violet-600 hover:text-white duration-300">Cotizar Ahora</a>
 				</div>
 			{% endfor %}
 		</div>

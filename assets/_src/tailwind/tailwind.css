@@ -57,3 +57,9 @@
 .menu .menu-item-has-children:hover > ul.sub-menu {
 	@apply block translate-y-0 opacity-100 pointer-events-auto
 }
+.producto-item:hover img {
+	@apply scale-100
+}
+.producto-item:hover .boton-cotizar {
+	@apply bg-violet-600 text-white
+}

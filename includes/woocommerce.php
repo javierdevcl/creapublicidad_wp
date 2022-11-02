@@ -57,5 +57,17 @@ class WooCommerceTheme {
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
+function remove_image_zoom_support() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 6; // 4 related products
+	return $args;
+}
+
+
 ( new WooCommerceTheme() )->init();
 
