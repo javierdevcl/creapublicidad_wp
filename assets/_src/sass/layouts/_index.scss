@@ -347,6 +347,9 @@ div.images {
 	display: none;
 }
 @media (max-width: 1024px) {
+	#marque-home h1, #marque-home span  {
+		font-size: 14px;
+	}
 	.home-container #ventajas-imprenta h2 {
 		font-size: 25px;
 	}

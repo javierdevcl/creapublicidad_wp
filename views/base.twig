@@ -145,6 +145,49 @@
 			<script src="{{ site.theme.link }}/assets/dist/owl.carousel.min.js"></script>
 			<script>
 				$(document).ready(function() {
+					$('.owl-categorias').owlCarousel({
+						margin: 10,
+						nav: true,
+						center: false,
+						dots: false,
+						autoplay: true,
+						autoplayTimeout: 4000,
+						autoplayHoverPause: true,
+						animateIn: 'fadeIn',
+						animateOut: 'fadeOut',
+						smartSpeed:450,
+						responsive: {
+							0: {
+								items: 5
+							},
+							760: {
+								items: 7
+							}
+						}
+					})
+
+					$('.owl-slider').owlCarousel({
+						loop: true,
+						margin: 3,
+						nav: false,
+						center: false,
+						dots: false,
+						autoplay: true,
+						autoplayTimeout: 5000,
+						autoplayHoverPause: true,
+						animateIn: 'fadeIn',
+						animateOut: 'fadeOut',
+						smartSpeed:450,
+						responsive: {
+							0: {
+								items: 1
+							},
+							760: {
+								items: 1
+							}
+						}
+					})
+
 					$('.owl-productos').owlCarousel({
 						loop: true,
 						margin: 0,
@@ -176,28 +219,6 @@
 							1450: {
 								items: 4,
 								margin: 35
-							}
-						}
-					})
-
-					$('.owl-slider').owlCarousel({
-						loop: true,
-						margin: 3,
-						nav: false,
-						center: false,
-						dots: false,
-						autoplay: true,
-						autoplayTimeout: 5000,
-						autoplayHoverPause: true,
-						animateIn: 'fadeIn',
-						animateOut: 'fadeOut',
-						smartSpeed:450,
-						responsive: {
-							0: {
-								items: 1
-							},
-							760: {
-								items: 1
 							}
 						}
 					})

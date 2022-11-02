@@ -1,40 +1,56 @@
 {% extends "base.twig" %}
 {% block content %}
+	<div class="block md:hidden">
+		<div class="owl-carousel owl-categorias">
+		{% for categories in category %}
+			{% if categories.meta('thumbnail_id') %}
+				<div class="categoria-item">
+					<img src="{{ Image(categories.meta('thumbnail_id')) }}" class="border rounded-full shadow-md p-2" />
+					<h5 class="text-[7px] text-center">{{ categories.title }}</h5>
+				</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+	</div>
 	<div class="container-slider mx-auto">
-		<div class="grid grid-cols-[72.5%_26%] gap-7 py-5">
+		<div class="grid grid-cols-1 md:grid-cols-[72.5%_26%] gap-7 py-0 md:py-5">
 			<div>
-				{% for slider in options.slider_home %}
-					{% if slider.acf_fc_layout == 'slider' %}
-						aa
-						<img src="{{ Image(slider.imagen).src }}" />
-						<p class="caption">{{ Image(media_item.image).caption }}</p>
-						<aside class="notes">{{ media_item.notes }}</aside>
-					{% elseif media_item.acf_fc_layout == 'video_set' %}
-						<iframe width="560" height="315" src="http://www.youtube.com/embed/{{ media_item.youtube_id }}" frameborder="0" allowfullscreen></iframe>
-						<p class="caption">{{ media_item.caption }}</p>
-					{% endif %}
-				{% endfor %}
-				<div class="owl-carousel owl-slider">
-					{% for image in options.slider %}
-						<div class="slider-item">
-							<img src="{{ Image(image) }}" />
-						</div>
-					{% endfor %}
+				<div class="hidden md:block">
+					<div class="owl-carousel owl-slider">
+						{% for slider in options.slider_home %}
+							{% if slider.acf_fc_layout == 'slider' %}
+								<div class="slider-item">
+									<img src="{{ Image(slider.imagen) }}" />
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+				<div class="block md:hidden">
+					<div class="owl-carousel owl-slider">
+						{% for slider in options.slider_home %}
+							{% if slider.acf_fc_layout == 'slider' %}
+								<div class="slider-item">
+									<img src="{{ Image(slider.imagen_mobile) }}" />
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 content-between">
+			<div class="grid-cols-1 content-between hidden md:grid">
 				<img src="{{ Image(options.banner_home_1).src }}" class="w-full" />
 				<img src="{{ Image(options.banner_home_2).src }}" class="w-full" />
 			</div>
 		</div>
 	</div>
 	<section id="marque-home" class="bg-black">
-		<div class="container-slider mx-auto py-1.5 text-white">
+		<div class="container-slider mx-auto py-1 md:py-1.5 text-white">
 			<marquee class="align-middle"><h1>Imprenta digital y offset en Santiago</h1> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Conoce nuestros NUEVOS ⚡Stickers Premium🔥</span> <span>Pendónes de toda las medidas interior, exterior, colgante⭐</span> <span>Papelería Corporativa para su empresa o marca🔥</span> <span>Impresión de Tarjetas de Presentación, Clasica, Cuadradas, Termolaminadas🔥</span> <span>Flyers y Volantes de calidad y profesional</span> <span>⭐Impresión Plotter, Tela PVC, Adhesivos, Stickers</span></marquee>
 		</div>
 	</section>
 	<div class="container-slider mx-auto owl-home">
-		<h2 class="text-center text-xl sm:text-4xl font-bold pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
+		<h2 class="text-center text-xl sm:text-4xl font-bold pt-4 md:pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
 		<div class="owl-carousel owl-loaded owl-drag owl-productos">
 			{% for post in top_selling %}
 				<div class="producto-item px-1 md:px-0">
