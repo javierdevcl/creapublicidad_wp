@@ -63,3 +63,6 @@
 .producto-item:hover .boton-cotizar {
 	@apply bg-violet-600 text-white
 }
+.variations select {
+	@apply rounded border-neutral-300 text-neutral-400 text-[15px]
+}

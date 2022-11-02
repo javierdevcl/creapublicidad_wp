@@ -382,3 +382,19 @@ div.images {
 .woocommerce-Tabs-panel--description.panel b {
 	font-weight: 500;
 }
+
+.woocommerce-tabs .tabs>li.active {
+	background-color: #9b00ff!important;
+}
+
+.woocommerce-tabs .tabs>li.active a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.variations .value {
+	width: 70%!important;
+	max-width: 70%;
+	margin-bottom: 8px;
+	float: left;
+}
