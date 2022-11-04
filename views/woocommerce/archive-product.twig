@@ -84,9 +84,9 @@
      # @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
      #}
     {% do wc_action('woocommerce_after_main_content') %}
-	<header class="woocommerce-products-header">
 
 
+	<div class="max-w-[1150px] taxonomy-description mx-auto py-10 px-7 text-lg font-light leading-9 md:leading-7">
 		{##
          # Hook: woocommerce_archive_description.
          #
@@ -94,6 +94,6 @@
          # @hooked woocommerce_product_archive_description - 10
 		#}
 		{% do wc_action('woocommerce_archive_description') %}
-	</header>
+	</div>
 
 {% endblock %}

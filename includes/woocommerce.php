@@ -35,6 +35,7 @@ class WooCommerceTheme {
 		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 		remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 	}
 
 	/**
@@ -68,6 +69,34 @@ function jk_related_products_args( $args ) {
 	return $args;
 }
 
+/**
+ * Rename "home" in breadcrumb
+ */
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+function wcc_change_breadcrumb_home_text( $defaults ) {
+	// Change the breadcrumb home text from 'Home' to 'Apartment'
+	$defaults['home'] = 'Imprenta';
+	return $defaults;
+}
+
+/**
+ * Change the breadcrumb separator
+ */
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
+function wcc_change_breadcrumb_delimiter( $defaults ) {
+	// Change the breadcrumb delimeter from '/' to '>'
+	$defaults['delimiter'] = '<div class="separator-breadcrumb"> &gt; </div>';
+	return $defaults;
+}
+
+/**
+ * Disable WooCommerce block styles (front-end).
+ */
+function themesharbor_disable_woocommerce_block_styles() {
+	wp_dequeue_style( 'wc-blocks-vendors' );
+	wp_dequeue_style( 'wc-blocks-style' );
+}
+add_action( 'wp_enqueue_scripts', 'themesharbor_disable_woocommerce_block_styles' );
 
 ( new WooCommerceTheme() )->init();
 

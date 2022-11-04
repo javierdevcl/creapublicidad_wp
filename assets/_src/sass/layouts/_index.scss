@@ -398,3 +398,51 @@ div.images {
 	margin-bottom: 8px;
 	float: left;
 }
+
+.taxonomy-description {
+	h3 {
+		font-size: 25px;
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 18px;
+	}
+	h4 {
+		font-size: 20px;
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 7px;
+	}
+	a {
+		color: #9b00ff;
+	}
+}
+
+.separator-breadcrumb {
+	display: inline-block;
+	padding: 0 8px;
+	color: #999;
+}
+
+.woocommerce-breadcrumb {
+	color: #292929;
+	font-family: poppins;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+}
+
+.woocommerce-breadcrumb>a {
+	color: #999;
+}
+
+.archive .woocommerce-breadcrumb>a {
+	color: #fff;
+}
+
+.archive .woocommerce-breadcrumb {
+	color: #fff;
+	font-family: poppins;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+}
