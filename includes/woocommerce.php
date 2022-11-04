@@ -50,8 +50,6 @@ class WooCommerceTheme {
 		add_theme_support( 'woocommerce' );
 
 		// Optional.
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
 	}
 }
@@ -97,6 +95,21 @@ function themesharbor_disable_woocommerce_block_styles() {
 	wp_dequeue_style( 'wc-blocks-style' );
 }
 add_action( 'wp_enqueue_scripts', 'themesharbor_disable_woocommerce_block_styles' );
+
+
+function wc_remove_image_effect_support() {
+
+	remove_theme_support( 'wc-product-gallery-zoom' );
+	remove_theme_support( 'wc-product-gallery-lightbox' );
+
+}
+
+add_action( 'after_setup_theme', 'wc_remove_image_effect_support', 100 );
+
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'custom_remove_product_link' );
+function custom_remove_product_link( $html ) {
+	return strip_tags( $html, '<div><img>' );
+}
 
 ( new WooCommerceTheme() )->init();
 

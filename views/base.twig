@@ -42,21 +42,21 @@
 							<a href="" class="text-2xl ml-5 block lg:hidden">
 								<i aria-hidden="true" class="fas fa-user-alt"></i>
 							</a>
-							<a href="#" class="text-sm hover:text-violet-600 hidden lg:block">
+							<a href="{{ site.url }}/contacto/" class="text-sm hover:text-violet-600 hidden lg:block">
 								<strong>Ayuda</strong> <br>y contacto
 							</a>
 							<span class="w-px h-10 mx-5 border-r border-zinc-300 hidden lg:block"></span>
-							<a href="#" class="text-sm hover:text-violet-600 hidden lg:block">
+							<a href="{{ site.url }}/mi-cuenta/" class="text-sm hover:text-violet-600 hidden lg:block">
 								<strong>Mi Cuenta</strong> <br>y cotizaciones
 							</a>
-							<a href="" class="ml-5 lg:ml-6 text-xl hover:text-violet-600">
+							<a href="{{ site.url }}/realizar-cotizacion/" class="ml-5 lg:ml-6 text-xl hover:text-violet-600">
 								<i aria-hidden="true" class="fas fa-shopping-cart"></i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<nav id="menu-principal" class="relative hidden lg:block">
-					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-14 md:px-6">
+					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-14 md:px-14">
 						<div class="flex items-center list-none">
 							{% include "menu.twig" with {'items': main_menu.get_items} %}
 						</div>
@@ -127,7 +127,7 @@
 					<div class="bg-neutral-100 p-4 px-11">
 						<div class="py-3 overflow-y-auto">
 							<ul class="space-y-1">
-								{% for item in footer_menu_1.items %}
+								{% for item in footer_menu_2.items %}
 									<li>
 										<a href="{{ item.link }}" class="flex items-center p-2 text-base font-normal text-gray-900 {{ item.classes|join(' ') }}">
 											<span class="ml-3">{{ item.title }}</span>
@@ -141,126 +141,9 @@
 			</div>
 
 			<script src="https://kit.fontawesome.com/a50e9432f4.js" crossorigin="anonymous"></script>
-			<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+			<script src="{{ site.theme.link }}/assets/dist/jquery-3.6.1.min.js"></script>
 			<script src="{{ site.theme.link }}/assets/dist/owl.carousel.min.js"></script>
-			<script>
-				$(document).ready(function() {
-					$('.owl-categorias').owlCarousel({
-						margin: 10,
-						nav: false,
-						center: false,
-						dots: false,
-						autoplay: true,
-						autoplayTimeout: 4000,
-						autoplayHoverPause: true,
-						animateIn: 'fadeIn',
-						animateOut: 'fadeOut',
-						smartSpeed:450,
-						responsive: {
-							0: {
-								items: 5
-							},
-							760: {
-								items: 7
-							}
-						}
-					})
-
-					$('.owl-slider').owlCarousel({
-						loop: true,
-						margin: 3,
-						nav: false,
-						center: false,
-						dots: false,
-						autoplay: true,
-						autoplayTimeout: 5000,
-						autoplayHoverPause: true,
-						animateIn: 'fadeIn',
-						animateOut: 'fadeOut',
-						smartSpeed:450,
-						responsive: {
-							0: {
-								items: 1
-							},
-							760: {
-								items: 1
-							}
-						}
-					})
-
-					$('.owl-productos').owlCarousel({
-						loop: true,
-						margin: 0,
-						nav: true,
-						center: true,
-						dots: false,
-						autoplay: true,
-						autoplayTimeout: 6000,
-						autoplayHoverPause: false,
-						responsive: {
-							0: {
-								items: 2,
-								margin: 14,
-								center: true,
-								loop: true
-							},
-							480: {
-								items: 3,
-								loop: true
-							},
-							767: {
-								items: 4,
-								margin: 25
-							},
-							1140: {
-								items: 4,
-								margin: 40
-							},
-							1450: {
-								items: 4,
-								margin: 35
-							}
-						}
-					})
-
-					$('.owl-relacionados').owlCarousel({
-						loop: true,
-						margin: 0,
-						nav: false,
-						center: false,
-						dots: false,
-						autoplay: true,
-						autoplayTimeout: 6000,
-						autoplayHoverPause: false,
-						responsive: {
-							0: {
-								items: 1,
-								margin: 10,
-								center: true,
-								loop: true
-							},
-							480: {
-								items: 2,
-								margin: 8,
-								loop: true
-							},
-							767: {
-								items: 4,
-								margin: 8
-							},
-							1140: {
-								items: 4,
-								margin: 10
-							},
-							1450: {
-								items: 4,
-								margin: 12
-							}
-						}
-					})
-
-				});
-			</script>
+			<script src="{{ site.theme.link }}/assets/dist/owl.js"></script>
 			{{ function('wp_footer') }}
 		{% endblock %}
 	</body>
