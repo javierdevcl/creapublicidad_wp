@@ -20,7 +20,7 @@
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
 								<div class="slide-owl-wrap slider-item">
-									<img src="{{ Image(slider.imagen) }}" class="{{ Image(slider.imagen).alt }}" />
+									<img src="{{ Image(slider.imagen) }}" alt="{{ Image(slider.imagen).alt }}" />
 								</div>
 							{% endif %}
 						{% endfor %}
