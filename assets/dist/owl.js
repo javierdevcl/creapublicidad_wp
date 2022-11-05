@@ -125,12 +125,13 @@ $(document).ready(function() {
     }
   })
 
+  $(this).find('.owl-prev').each(function(index) {
+    $(this).attr('aria-label',"Anterior");
+  })
+
+  $(this).find('.owl-next').each(function(index) {
+    $(this).attr('aria-label',"Siguiente");
+  })
+
 });
 
-$(this).find('.owl-prev').each(function(index) {
-  $(this).attr('aria-label',"Anterior");
-});
-
-$(this).find('.owl-next').each(function(index) {
-  $(this).attr('aria-label',"Siguiente");
-});
