@@ -66,3 +66,9 @@
 .variations select {
 	@apply rounded border-neutral-300 text-neutral-400 text-[15px]
 }
+button[aria-hidden=true] {
+	display:none;
+}
+a[aria-hidden=true] {
+	display:none;
+}

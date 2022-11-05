@@ -1,0 +1,150 @@
+{% block html_head_container %}
+
+	{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+
+<header class="header">
+	{% block header %}
+		<div class="bg-white">
+			<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-4 md:px-6 py-5">
+				<div class="flex w-3/6 md:w-1/6 order-1 items-center">
+					<button class="mr-6 leading-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation" aria-label="Menu">
+						<i class="fa fa-bars text-2xl" aria-hidden="true"></i>
+					</button>
+					<a href="{{site.url}}">
+						<img src="{{custom_logo_url}}" class="h-11" alt="Logotipo CreaPublicidad">
+					</a>
+					<button class="ml-10 text-base font-bold leading-none hidden lg:block" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+						Productos
+					</button>
+				</div>
+				<div class="flex w-full md:w-2/6 order-3 md:order-2 mt-3 md:mt-0 items-center">
+					<form id="search" class="flex items-center m-auto">
+						<label for="header-search" class="sr-only">Buscar</label>
+						<div class="relative w-full">
+							<input type="text" id="header-search" class="bg-zinc-100 border-none focus:border-transparent focus:ring-0 text-sm placeholder-black font-bold rounded-l-3xl block w-full pl-5 md:pl-7 p-3.5 md:p-3" placeholder="¿Qué estas buscando?" required>
+						</div>
+						<button type="submit" class="p-3.5 md:p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none">
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+							<span class="sr-only">Buscar</span>
+						</button>
+					</form>
+				</div>
+				<div class="flex order-2 md:order-3 items-center">
+					<a href="tel:+562 2952 0966" class="text-2xl block lg:hidden">
+						<i aria-hidden="true" class="far fa-phone-volume"></i>
+					</a>
+					<a href="{{ site.url }}/mi-cuenta/" class="text-2xl ml-5 block lg:hidden">
+						<i aria-hidden="true" class="fas fa-user-alt"></i>
+					</a>
+					<a href="{{ site.url }}/contacto/" class="text-sm hover:text-violet-600 hidden lg:block">
+						<strong>Ayuda</strong> <br>y contacto
+					</a>
+					<span class="w-px h-10 mx-5 border-r border-zinc-300 hidden lg:block"></span>
+					<a href="{{ site.url }}/mi-cuenta/" class="text-sm hover:text-violet-600 hidden lg:block">
+						<strong>Mi Cuenta</strong> <br>y cotizaciones
+					</a>
+					<a href="{{ site.url }}/realizar-cotizacion/" class="ml-5 lg:ml-6 text-xl hover:text-violet-600" aria-label="Carro de Compra">
+						<i aria-hidden="true" class="fas fa-shopping-cart"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<nav id="menu-principal" class="relative hidden lg:block">
+			<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-14 md:px-14">
+				<div class="flex items-center list-none">
+					{% include "menu.twig" with {'items': main_menu.get_items} %}
+				</div>
+			</div>
+		</nav>
+	{% endblock %}
+</header>
+
+<section id="content" role="main" class="content-wrapper">
+	{% block content endblock %}
+</section>
+
+{% block footer %}
+	<footer id="footer">
+		{% include 'footer-woo.twig' %}
+	</footer>
+
+	<div id="drawer-navigation" class="fixed z-40 h-screen hidden overflow-y-auto bg-white w-full md:w-[450px]" tabindex="-1" aria-labelledby="drawer-navigation-label">
+		<button type="button" data-drawer-dismiss="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+			<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+			<span class="sr-only">Close menu</span>
+		</button>
+		<div class="h-full grid grid-cols-1 content-between">
+			<div class="p-4 px-11">
+				<a href="{{site.url}}">
+					<img src="{{custom_logo_url}}" class="h-14 mt-4 mb-5 m-auto" alt="Logotipo CreaPublicidad">
+				</a>
+				<form id="search" class="flex items-center mb-5">
+					<label for="drawer-search" class="sr-only">Buscar</label>
+					<div class="relative w-full">
+						<input type="text" id="simple-search" class="bg-zinc-100 border-none text-sm placeholder-black font-semibold rounded-l-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-3" placeholder="¡Encuentre rápido su producto!" required>
+					</div>
+					<button type="submit" class="p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+						<span class="sr-only">Buscar</span>
+					</button>
+				</form>
+				<div class="border-t"></div>
+				<h5 class="mt-7 text-sm font-semibold text-black uppercase">Productos Populares</h5>
+				<div class="py-3 overflow-y-auto">
+					<ul class="space-y-1">
+						{% for item in main_menu.items %}
+							<li>
+								{% if item.children %}
+									<button type="button" href="{{ item.link }}" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100" aria-controls="dropdown-{{ item.id }}" data-collapse-toggle="dropdown-{{ item.id }}">
+												<span class="flex-1 ml-3 text-left whitespace-nowrap">
+													<a href="{{ item.link }}">{{ item.title }}</a>
+												</span>
+										<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+									</button>
+									<ul id="dropdown-{{ item.id }}" class="hidden py-2 space-y-1">
+										{% for item in item.children %}
+											<li>
+												<a href="{{ item.link }}" class="flex items-center w-full p-2 text-sm font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">{{ item.title }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								{% else %}
+									<a href="{{ item.link }}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 {{ item.classes|join(' ') }}">
+										<span class="ml-3">{{ item.title }}</span>
+									</a>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="bg-neutral-100 p-4 px-11">
+				<div class="py-3 overflow-y-auto">
+					<ul class="space-y-1">
+						{% for item in footer_menu_2.items %}
+							<li>
+								<a href="{{ item.link }}" class="flex items-center p-2 text-base font-normal text-gray-900">
+									<span class="ml-3">{{ item.title }}</span>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://kit.fontawesome.com/a50e9432f4.js" crossorigin="anonymous"></script>
+	<script src="{{ site.theme.link }}/assets/dist/jquery-3.6.1.min.js"></script>
+	<script src="{{ site.theme.link }}/assets/dist/owl.carousel.min.js"></script>
+	<script src="{{ site.theme.link }}/assets/dist/owl.js"></script>
+	{{ function('wp_footer') }}
+{% endblock %}
+</body>
+</html>

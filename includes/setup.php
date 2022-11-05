@@ -103,6 +103,8 @@ class Theme extends Site
 
 function dequeue_gutenberg_theme_css() {
 	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'classic-theme-styles' );
+
 }
 add_action( 'wp_enqueue_scripts', 'dequeue_gutenberg_theme_css', 100 );
 
@@ -115,5 +117,6 @@ function wpb_demo_shortcode() {
 
 add_shortcode('greeting', 'wpb_demo_shortcode');
 
+add_image_size( 'product-thumb', 360, 360, true );
 
 new Theme();

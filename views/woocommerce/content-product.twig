@@ -4,7 +4,7 @@
 		<a href="{{ post.link }}">
 			{% if post.thumbnail %}
 				<div class="px-3">
-					<img src="{{ post.thumbnail.src('woocommerce_single') }}" class="scale-90 duration-300">
+					<img src="{{ post.thumbnail.src('product-thumb') }}" alt="{{ post.thumbnail.alt }}" class="scale-90 duration-300">
 				</div>
 			{% endif %}
 			<h3 class="text-base text-center font-semibold">{{ post.title }}</h3>
