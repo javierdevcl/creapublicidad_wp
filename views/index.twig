@@ -4,13 +4,8 @@
 		<div class="owl-carousel owl-categorias mb-2">
 		{% for categories in category %}
 			{% if categories.meta('thumbnail_id') %}
-<<<<<<< HEAD
-				<div class="categoria-item">
-					<img src="{{ Image(categories.meta('thumbnail_id')).src('thumbnail') }}" alt="{{ Image(categories.meta('thumbnail_id')).alt }}" width="150" height="150" class="border rounded-full shadow-md p-1" />
-=======
 				<div class="slide-owl-wrap categoria-item">
 					<img src="{{ Image(categories.meta('thumbnail_id'))|resize(150) }}" width="150" height="150" class="border rounded-full shadow-md p-1" />
->>>>>>> 3d16a067a4a998d2c921389114eb357184abae75
 					<h5 class="text-[7px] text-center font-semibold	mt-1 px-3">{{ categories.title }}</h5>
 				</div>
 			{% endif %}
@@ -25,13 +20,8 @@
 					<div class="owl-carousel owl-slider">
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
-<<<<<<< HEAD
-								<div class="slider-item">
-									<img src="{{ Image(slider.imagen) }}" alt="{{ Image(slider.imagen).alt }}" />
-=======
 								<div class="slide-owl-wrap slider-item">
 									<img src="{{ Image(slider.imagen) }}" />
->>>>>>> 3d16a067a4a998d2c921389114eb357184abae75
 								</div>
 							{% endif %}
 						{% endfor %}
@@ -41,13 +31,8 @@
 					<div class="owl-carousel owl-slider">
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
-<<<<<<< HEAD
-								<div class="slider-item">
-									<img src="{{ Image(slider.imagen_mobile) }}" alt="{{ Image(slider.imagen_mobile).alt }}"" />
-=======
 								<div class="slide-owl-wrap slider-item">
 									<img src="{{ Image(slider.imagen_mobile) }}" />
->>>>>>> 3d16a067a4a998d2c921389114eb357184abae75
 								</div>
 							{% endif %}
 						{% endfor %}
