@@ -20,7 +20,7 @@
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
 								<div class="slide-owl-wrap slider-item">
-									<img src="{{ Image(slider.imagen) }}" />
+									<img src="{{ Image(slider.imagen) }}" class="{{ Image(slider.imagen).alt }}" />
 								</div>
 							{% endif %}
 						{% endfor %}
@@ -40,10 +40,10 @@
 			</div>
 			<div class="grid-cols-1 content-between hidden md:grid">
 				<a href="{{ site.url }}/categoria/stickers/" class="duration-500 hover:opacity-75" aria-label="Stickers">
-					<img src="{{ Image(options.banner_home_1).src }}" alt="{{ Image(options.banner_home_1).alt }}"" class="w-full" />
+					<img src="{{ Image(options.banner_home_1).src }}" alt="{{ Image(options.banner_home_1).alt }}" class="w-full" />
 				</a>
 				<a href="{{ site.url }}/categoria/regalos-corporativos/" class="duration-500 hover:opacity-75" aria-label="Regalos Corporativos">
-					<img src="{{ Image(options.banner_home_2).src }}" alt="{{ Image(options.banner_home_1).alt }}"" class="w-full" />
+					<img src="{{ Image(options.banner_home_2).src }}" alt="{{ Image(options.banner_home_1).alt }}" class="w-full" />
 				</a>
 			</div>
 		</div>
