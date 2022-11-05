@@ -5,7 +5,7 @@
 		{% for categories in category %}
 			{% if categories.meta('thumbnail_id') %}
 				<div class="slide-owl-wrap categoria-item">
-					<img src="{{ Image(categories.meta('thumbnail_id'))|resize(150) }}" width="150" height="150" class="border rounded-full shadow-md p-1" />
+					<img src="{{ Image(categories.meta('thumbnail_id')).src('thumbnail') }}" alt="{{ Image(categories.meta('thumbnail_id')).alt }}" width="150" height="150" class="border rounded-full shadow-md p-1" />
 					<h5 class="text-[7px] text-center font-semibold	mt-1 px-3">{{ categories.title }}</h5>
 				</div>
 			{% endif %}
