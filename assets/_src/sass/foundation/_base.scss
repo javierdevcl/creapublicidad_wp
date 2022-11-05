@@ -7,3 +7,15 @@ body {
 p {
 	margin: 0 0 1em !important;
 }
+
+.owl-carousel {
+	display: block;
+}
+
+.owl-carousel .slide-owl-wrap:not(:first-child) {
+	display: none;
+}
+
+.owl-carousel img {
+	width: 100%;
+}

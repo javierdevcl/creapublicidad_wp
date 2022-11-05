@@ -1,6 +1,6 @@
 {# Ensure visibility. #}
 {% if product and product.is_visible() %}
-	<li class="producto-item">
+	<li class="slide-owl-wrap producto-item">
 		{% if post.thumbnail %}
 			<div class="px-3 bg-[#f9f9f9]">
 				<img src="{{ post.thumbnail.src('woocommerce_single') }}" class="scale-90 duration-300">

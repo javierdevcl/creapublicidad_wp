@@ -4,7 +4,7 @@
 		<div class="owl-carousel owl-categorias mb-2">
 		{% for categories in category %}
 			{% if categories.meta('thumbnail_id') %}
-				<div class="categoria-item">
+				<div class="slide-owl-wrap categoria-item">
 					<img src="{{ Image(categories.meta('thumbnail_id'))|resize(150) }}" width="150" height="150" class="border rounded-full shadow-md p-1" />
 					<h5 class="text-[7px] text-center font-semibold	mt-1 px-3">{{ categories.title }}</h5>
 				</div>
@@ -19,7 +19,7 @@
 					<div class="owl-carousel owl-slider">
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
-								<div class="slider-item">
+								<div class="slide-owl-wrap slider-item">
 									<img src="{{ Image(slider.imagen) }}" />
 								</div>
 							{% endif %}
@@ -30,7 +30,7 @@
 					<div class="owl-carousel owl-slider">
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
-								<div class="slider-item">
+								<div class="slide-owl-wrap slider-item">
 									<img src="{{ Image(slider.imagen_mobile) }}" />
 								</div>
 							{% endif %}
@@ -57,7 +57,7 @@
 		<h2 class="text-center text-xl sm:text-4xl font-bold pt-4 md:pt-8 pb-4 text-violet-600">🔥Productos <span class="text-black font-normal">Destacados</span>🔥</h2>
 		<div class="owl-carousel owl-loaded owl-drag owl-productos">
 			{% for post in top_selling %}
-				<div class="producto-item px-1 md:px-0">
+				<div class="slide-owl-wrap producto-item px-1 md:px-0">
 					<a href="{{ post.link }}">
 						<div class="product-image mb-2.5 px-2 rounded-t-lg">
 							<img src="{{ post.thumbnail.src('shop_single')|resize(360) }}" width="360" height="360"  class="scale-90 duration-300" />
