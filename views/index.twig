@@ -1,17 +1,5 @@
 {% extends "base.twig" %}
 {% block content %}
-	<div class="block md:hidden">
-		<div class="owl-carousel owl-categorias mb-2">
-		{% for categories in category %}
-			{% if categories.meta('thumbnail_id') %}
-				<div class="slide-owl-wrap categoria-item">
-					<img src="{{ Image(categories.meta('thumbnail_id')).src('thumbnail') }}" alt="{{ Image(categories.meta('thumbnail_id')).alt }}" width="150" height="150" class="noimg border rounded-full shadow-md p-1" />
-					<h5 class="text-[7px] text-center font-semibold	mt-1 px-3">{{ categories.title }}</h5>
-				</div>
-			{% endif %}
-		{% endfor %}
-		</div>
-	</div>
 	<div class="container-slider mx-auto">
 		<div class="grid grid-cols-1 md:grid-cols-[72.5%_26%] gap-7 py-0 md:py-5">
 			<div>
