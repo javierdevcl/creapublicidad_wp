@@ -92,6 +92,8 @@ class Theme extends Site
 
 		wp_enqueue_script('bathe-bundle', get_theme_file_uri('/assets/js/main.js'), array(), filemtime(get_theme_file_path('/assets/js/main.js')));
 
+		wp_enqueue_script('jquery');
+
 		//wp_enqueue_script( 'bathe-bundle', get_theme_file_uri( 'assets/js/main.js' ), array(), null, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
