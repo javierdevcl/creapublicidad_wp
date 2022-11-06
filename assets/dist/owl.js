@@ -10,8 +10,8 @@ jQuery.event.special.touchmove = {
   }
 };
 
-$(document).ready(function() {
-  $('.owl-categorias').owlCarousel({
+jQuery(document).ready(function() {
+  jQuery('.owl-categorias').owlCarousel({
     margin: 10,
     nav: false,
     center: false,
@@ -32,7 +32,7 @@ $(document).ready(function() {
     }
   })
 
-  $('.owl-slider').owlCarousel({
+  jQuery('.owl-slider').owlCarousel({
     loop: true,
     margin: 3,
     nav: false,
@@ -54,7 +54,7 @@ $(document).ready(function() {
     }
   })
 
-  $('.owl-productos').owlCarousel({
+  jQuery('.owl-productos').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
@@ -89,7 +89,7 @@ $(document).ready(function() {
     }
   })
 
-  $('.owl-relacionados').owlCarousel({
+  jQuery('.owl-relacionados').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
@@ -125,12 +125,12 @@ $(document).ready(function() {
     }
   })
 
-  $(this).find('.owl-prev').each(function(index) {
-    $(this).attr('aria-label',"Anterior");
+  jQuery(this).find('.owl-prev').each(function(index) {
+    jQuery(this).attr('aria-label',"Anterior");
   })
 
-  $(this).find('.owl-next').each(function(index) {
-    $(this).attr('aria-label',"Siguiente");
+  jQuery(this).find('.owl-next').each(function(index) {
+    jQuery(this).attr('aria-label',"Siguiente");
   })
 
 });
