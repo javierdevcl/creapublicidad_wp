@@ -31,7 +31,7 @@
 						{% for slider in options.slider_home %}
 							{% if slider.acf_fc_layout == 'slider' %}
 								<div class="slide-owl-wrap slider-item">
-									<img src="{{ Image(slider.imagen_mobile) }}" width="600" />
+									<img src="{{ Image(slider.imagen_mobile) }}" alt="{{ Image(slider.imagen).alt }}" width="600" />
 								</div>
 							{% endif %}
 						{% endfor %}
