@@ -8,7 +8,7 @@
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-5 py-2">
 				<div class="col-span-3">
-					<img src="{{ Image(term.meta('imagen-categoria')).src }}" class="w-3/5 m-auto" />
+					<img src="{{ Image(term.meta('imagen-categoria')).src }}" alt="{{ Image(term.meta('imagen-categoria')).alt }}" class="w-3/5 m-auto" />
 				</div>
 				<div class="col-span-2 self-center px-4 md:px-0">
 					{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
