@@ -10,8 +10,8 @@ jQuery.event.special.touchmove = {
   }
 };
 
-jQuery(document).ready(function() {
-  jQuery('.owl-categorias').owlCarousel({
+$(document).ready(function() {
+  $('.owl-categorias').owlCarousel({
     margin: 10,
     nav: false,
     center: false,
@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery('.owl-slider').owlCarousel({
+  $('.owl-slider').owlCarousel({
     loop: true,
     margin: 3,
     nav: false,
@@ -54,7 +54,7 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery('.owl-productos').owlCarousel({
+  $('.owl-productos').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
@@ -125,12 +125,12 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery(this).find('.owl-prev').each(function(index) {
-    jQuery(this).attr('aria-label',"Anterior");
+  $(this).find('.owl-prev').each(function(index) {
+    $(this).attr('aria-label',"Anterior");
   })
 
-  jQuery(this).find('.owl-next').each(function(index) {
-    jQuery(this).attr('aria-label',"Siguiente");
+  $(this).find('.owl-next').each(function(index) {
+    $(this).attr('aria-label',"Siguiente");
   })
 
 });
