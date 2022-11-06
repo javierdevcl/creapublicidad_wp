@@ -89,7 +89,7 @@ $(document).ready(function() {
     }
   })
 
-  jQuery('.owl-relacionados').owlCarousel({
+  $('.owl-relacionados').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
