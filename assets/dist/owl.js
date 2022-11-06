@@ -1,17 +1,17 @@
 // Passive event listeners
-jQuery.event.special.touchstart = {
+$.event.special.touchstart = {
   setup: function( _, ns, handle ) {
     this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
   }
 };
-jQuery.event.special.touchmove = {
+$.event.special.touchmove = {
   setup: function( _, ns, handle ) {
     this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
   }
 };
 
-jQuery(document).ready(function() {
-  jQuery('.owl-categorias').owlCarousel({
+$(document).ready(function() {
+  $('.owl-categorias').owlCarousel({
     margin: 10,
     nav: false,
     center: false,
@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery('.owl-slider').owlCarousel({
+  $('.owl-slider').owlCarousel({
     loop: true,
     margin: 3,
     nav: false,
@@ -54,7 +54,7 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery('.owl-productos').owlCarousel({
+  $('.owl-productos').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
@@ -89,7 +89,7 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery('.owl-relacionados').owlCarousel({
+  $('.owl-relacionados').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
@@ -125,12 +125,12 @@ jQuery(document).ready(function() {
     }
   })
 
-  jQuery(this).find('.owl-prev').each(function(index) {
-    jQuery(this).attr('aria-label',"Anterior");
+  $(this).find('.owl-prev').each(function(index) {
+    $(this).attr('aria-label',"Anterior");
   })
 
-  jQuery(this).find('.owl-next').each(function(index) {
-    jQuery(this).attr('aria-label',"Siguiente");
+  $(this).find('.owl-next').each(function(index) {
+    $(this).attr('aria-label',"Siguiente");
   })
 
 });
