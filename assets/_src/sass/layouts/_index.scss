@@ -552,3 +552,8 @@ div.images {
 		width: 100px !important;
 	}
 }
+
+#drawer-navigation[aria-hidden=true] button,
+#drawer-navigation[aria-hidden=true] input {
+	visibility: hidden;
+}
