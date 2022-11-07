@@ -39,7 +39,7 @@
 						 # @hooked woocommerce_template_single_sharing - 50
 						 # @hooked WC_Structured_Data::generate_product_data() - 60
 						#}
-						<div class="px-4">
+						<div class="px-2 md:px-4">
 							{% do wc_action('woocommerce_single_product_summary') %}
 							<a href="{{ function('do_shortcode', '[greeting]') }}" class="w-full max-w-[450px] bg-[#1363df] text-white text-lg text-center font-medium uppercase inline-block float-right p-2.5 mt-3">
 								Cotizar por WhatsApp
