@@ -554,6 +554,7 @@ div.images {
 }
 
 #drawer-navigation[aria-hidden=true] button,
-#drawer-navigation[aria-hidden=true] input {
+#drawer-navigation[aria-hidden=true] input,
+#drawer-navigation[aria-hidden=true] a {
 	visibility: hidden;
 }
