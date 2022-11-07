@@ -347,6 +347,23 @@ div.images {
 .owl-carousel .owl-nav .owl-next span {
 	display: none;
 }
+.taxonomy-description {
+	h3 {
+		font-size: 25px;
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 18px;
+	}
+	h4 {
+		font-size: 20px;
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 7px;
+	}
+	a {
+		color: #9b00ff;
+	}
+}
 @media (max-width: 1024px) {
 	#marque-home h1, #marque-home span  {
 		font-size: 14px;
@@ -359,6 +376,14 @@ div.images {
 	.home-container #ventajas-imprenta h2 {
 		font-size: 20px;
 	}
+	.taxonomy-description {
+		h3 {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 15px;
+		}
+	}
 }
 @media (max-width: 640px) {
 	.home-container {
@@ -369,6 +394,14 @@ div.images {
 			h2 {
 				font-size: 25px;
 			}
+		}
+	}
+	.taxonomy-description {
+		h3 {
+			font-size: 16px;
+		}
+		h4 {
+			font-size: 14px;
 		}
 	}
 }
@@ -398,24 +431,6 @@ div.images {
 	max-width: 70%;
 	margin-bottom: 8px;
 	float: left;
-}
-
-.taxonomy-description {
-	h3 {
-		font-size: 25px;
-		font-weight: 500;
-		color: #000;
-		margin-bottom: 18px;
-	}
-	h4 {
-		font-size: 20px;
-		font-weight: 500;
-		color: #000;
-		margin-bottom: 7px;
-	}
-	a {
-		color: #9b00ff;
-	}
 }
 
 .separator-breadcrumb {
