@@ -6,39 +6,49 @@
 			<div class="text-xs	text-white font-normal px-3">
 				{% do wc_action('woocommerce_before_main_content') %}
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-5 py-2">
-				<div class="col-span-3">
-					<img src="{{ Image(term.meta('imagen-categoria')).src }}" alt="{{ Image(term.meta('imagen-categoria')).alt }}" class="w-3/5 m-auto" />
-				</div>
-				<div class="col-span-2 self-center px-4 md:px-0">
-					{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
-						<h1 class="text-2xl md:text-[40px] text-white text-center md:text-left mb-3 font-bold uppercase">{{ title }}</h1>
-					{% endif %}
-					<div class="text-sm	md:text-base text-white font-normal mb-3">
-						{{ term.meta('titulo-descripcion') }}
+			{% if request.get.s %}
+				<div class="grid grid-cols-1 py-14">
+					<div class="px-4">
+						{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
+							<h1 class="text-xl md:text-[30px] text-white text-center font-bold uppercase">{{ title }}</h1>
+						{% endif %}
 					</div>
-					<ul class="text-sm md:text-lg text-white space-y-1 md:space-y-2">
-						<li>
-							<div class="text-lg	md:text-xl inline-block pr-1">
-								<i aria-hidden="true" class="fad fa-check-circle"></i>
-							</div>
-							{{ term.meta('destacado-1') }}
-						</li>
-						<li>
-							<div class="text-lg	md:text-xl inline-block pr-1">
-								<i aria-hidden="true" class="fad fa-check-circle"></i>
-							</div>
-							{{ term.meta('_426') }}
-						</li>
-						<li>
-							<div class="text-lg	md:text-xl inline-block pr-1">
-								<i aria-hidden="true" class="fad fa-check-circle"></i>
-							</div>
-							{{ term.meta('_924') }}
-						</li>
-					</ul>
 				</div>
-			</div>
+			{% else %}
+				<div class="grid grid-cols-1 md:grid-cols-5 py-2">
+					<div class="col-span-3">
+						<img src="{{ Image(term.meta('imagen-categoria')).src }}" alt="{{ Image(term.meta('imagen-categoria')).alt }}" class="w-3/5 m-auto" />
+					</div>
+					<div class="col-span-2 self-center px-4 md:px-0">
+						{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
+							<h1 class="text-2xl md:text-[40px] text-white text-center md:text-left mb-3 font-bold uppercase">{{ title }}</h1>
+						{% endif %}
+						<div class="text-sm	md:text-base text-white font-normal mb-3">
+							{{ term.meta('titulo-descripcion') }}
+						</div>
+						<ul class="text-sm md:text-lg text-white space-y-1 md:space-y-2">
+							<li>
+								<div class="text-lg	md:text-xl inline-block pr-1">
+									<i aria-hidden="true" class="fad fa-check-circle"></i>
+								</div>
+								{{ term.meta('destacado-1') }}
+							</li>
+							<li>
+								<div class="text-lg	md:text-xl inline-block pr-1">
+									<i aria-hidden="true" class="fad fa-check-circle"></i>
+								</div>
+								{{ term.meta('_426') }}
+							</li>
+							<li>
+								<div class="text-lg	md:text-xl inline-block pr-1">
+									<i aria-hidden="true" class="fad fa-check-circle"></i>
+								</div>
+								{{ term.meta('_924') }}
+							</li>
+						</ul>
+					</div>
+				</div>
+			{% endif %}
 		</div>
 	</div>
     {% if fn('woocommerce_product_loop') %}
