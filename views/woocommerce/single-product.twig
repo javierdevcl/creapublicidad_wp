@@ -1,7 +1,7 @@
 {% extends 'base-woo.twig' %}
 
 {% block content %}
-	<div class="max-w-[1195px] mx-auto pt-7 px-4">
+	<div class="max-w-[1195px] mx-auto pt-0 md:pt-7 px-4">
 		<div class="text-xs font-light mb-4 hidden md:block">
 			{% do wc_action('woocommerce_before_main_content') %}
 		</div>
@@ -15,7 +15,7 @@
 
 		<div id="product-{{ post.id }}" {{ fn('wc_product_class') }}>
 			<div class="grid grid-cols-1 md:grid-cols-[52%_48%] py-2">
-				<div>
+				<div class="px-10 md:px-0">
 				{##
 				 # Hook: woocommerce_before_single_product_summary.
 				 #
@@ -24,9 +24,9 @@
 				#}
 				{% do wc_action('woocommerce_before_single_product_summary') %}
 				</div>
-				<div class="px-7 mb-8">
+				<div class="px-0 md:px-7 mb-8">
 					<div class="summary entry-summary">
-						<h4 class="text-xl border-b py-1 mt-1 mb-6">Cotiza tu Producto</h4>
+						<h4 class="text-xl border-b py-0 md:py-1 mt-0 md:mt-1 mb-4 md:mb-6">Cotiza tu Producto</h4>
 						{##
 						 # woocommerce_single_product_summary hook.
 						 #
