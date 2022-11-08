@@ -578,3 +578,185 @@ div.images {
 #drawer-navigation[aria-hidden=true] a {
 	visibility: hidden;
 }
+.ywraq-wrapper {
+	.ywraq_list_empty_message {
+		margin-bottom: 20px !important;
+		display: inline-block;
+	}
+	.ywraq_responsive thead {
+		display: table-header-group !important;
+	}
+	.button {
+		font-size: 16px;
+		font-weight: 500;
+		padding: 18px 35px !important;
+		border-radius: 4px !important;
+		border: none !important;
+		background-color: #3e8431;
+		color: #fff !important;
+		text-transform: uppercase;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	&.ywraq-empty {
+		.return-to-shop {
+			margin-bottom: 40px !important;
+			display: inline-block;
+		}
+	}
+	.shop_table {
+		border: 1px solid #ebeced;
+	}
+	.ywraq-form-table-wrapper {
+		width: 100%;
+		display: block;
+	}
+	table.cart tr th {
+		font-size: 14px;
+		font-weight: 500;
+		padding: 18px 25px !important;
+		text-transform: uppercase;
+		color: #797979;
+		border-bottom: 1px solid #ebeced;
+		&.product-quantity {
+			padding: 18px 45px !important;
+		}
+	}
+	table.cart tr td {
+		padding: 30px 10px;
+	}
+	.product-name {
+		font-size: 14px;
+		line-height: 14px;
+	}
+	.product-quantity {
+		padding: 18px 35px !important;
+		input {
+			width: 100px;
+			text-align: center;
+			color: #a1a2a4;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 8px 12px;
+			border: 1px solid #ebeced;
+			background-color: #fff;
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		}
+
+		input[type=number] {
+			-moz-appearance:textfield; /* Firefox */
+		}
+	}
+	.product-remove {
+		padding: 23px 20px 17px;
+		text-align: center;
+		color: #a1a2a4;
+	}
+	.product-name {
+		ul {
+			margin: 10px 0px !important;
+			li {
+				font-size: 13px;
+			}
+		}
+	}
+	table tr td.product-name a {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #424242;
+	}
+	.optional {
+		display: none;
+	}
+	.form-row label {
+		width: 30%;
+		font-family: "Poppins";
+		font-weight: 300;
+		font-size: 14px;
+		display: inline-block;
+		text-align: right;
+		padding-right: 4%;
+		vertical-align: top;
+		color: #797979;
+	}
+	.form-row label .required {
+		color: #e02b27;
+	}
+	.form-row .woocommerce-input-wrapper {
+		width: 70%;
+		display: inline-block;
+	}
+	.yith-ywraq-mail-form-wrapper {
+		padding: 10px 0px 25px !important;
+	}
+	.quantity label {
+		display: none;
+	}
+	table tr td.actions {
+		background: #fff;
+	}
+	table.cart tr td.actions>.button {
+		color: #ffffff;
+		background: #3e8431;
+		text-transform: uppercase;
+	}
+	table.cart tr td.actions>.button:hover {
+		opacity: 0.6;
+	}
+	tr td.product-thumbnail {
+		width: 80px;
+	}
+	.yith-ywraq-mail-form-wrapper h3, h2 {
+		width: 100%;
+		background-color: rgba(0,170,221,.1);
+		margin: 0 0 1.5rem;
+		padding: 10px;
+		font-family: "Poppins";
+		font-size: 22px;
+		font-weight: 700;
+		color: #0886ba;
+	}
+	.form-row input, .form-row textarea {
+		width: 100%;
+		border: 1px solid #c2c2c2;
+		border-radius: 0px;
+		padding: 6px 12px;
+	}
+	#yith-ywraq-message {
+		width: 100%;
+	}
+	.row2.form-row-first {
+		padding-right: 10px;
+	}
+	.row2.form-row-last {
+		padding-left: 10px;
+	}
+	#message {
+		min-height: 120px;
+	}
+	input[type=number]::-webkit-inner-spin-button {
+		opacity: 1
+	}
+	.yith-ywraq-mail-form-wrapper {
+		.button {
+			margin-right: 15px;
+			float: right;
+		}
+	}
+	input[type='text']:focus, input[type='email']:focus, input[type='url']:focus, input[type='password']:focus, input[type='search']:focus, input[type='number']:focus, input[type='tel']:focus, input[type='range']:focus, input[type='date']:focus, input[type='month']:focus, input[type='week']:focus, input[type='time']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, select:focus, textarea:focus {
+		outline: none;
+		-webkit-box-shadow: 0 5px 32px rgb(103 122 141 / 17%);
+		box-shadow: 0 5px 32px rgb(103 122 141 / 17%);
+	}
+}
+.ywraq-wrapper.ywraq-empty .ywraq-before-form, .ywraq-wrapper.ywraq-with-form.ywraq-empty .ywraq-before-form {
+	border: 2px dashed #EFEFEF !important;
+}
+
