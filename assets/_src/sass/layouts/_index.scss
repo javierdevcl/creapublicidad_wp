@@ -407,15 +407,20 @@ div.images {
 }
 
 .woocommerce-Tabs-panel--description.panel p {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
-	line-height: 26px;
+	line-height: 25px;
 	color: #404040;
 }
 
 .woocommerce-Tabs-panel--description.panel b {
 	font-weight: 500;
 }
+
+.woocommerce-Tabs-panel--description.panel h2 {
+	margin-bottom: 5px;
+}
+
 
 .woocommerce-tabs .tabs>li.active {
 	background-color: #9b00ff!important;

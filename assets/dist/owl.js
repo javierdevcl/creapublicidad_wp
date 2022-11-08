@@ -100,9 +100,8 @@ $(document).ready(function() {
     autoplayHoverPause: false,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
         margin: 10,
-        center: true,
         loop: true
       },
       480: {
