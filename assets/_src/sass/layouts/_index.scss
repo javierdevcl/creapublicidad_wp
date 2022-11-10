@@ -364,51 +364,6 @@ div.images {
 		color: #9b00ff;
 	}
 }
-@media (max-width: 1024px) {
-	#marque-home h1, #marque-home span  {
-		font-size: 14px;
-	}
-	.home-container #ventajas-imprenta h2 {
-		font-size: 25px;
-	}
-}
-@media (max-width: 767px) {
-	.home-container #ventajas-imprenta h2 {
-		font-size: 20px;
-	}
-	.archive .woocommerce-breadcrumb {
-		font-size: 12px;
-	}
-	.taxonomy-description {
-		h3 {
-			font-size: 20px;
-		}
-		h4 {
-			font-size: 15px;
-		}
-	}
-}
-@media (max-width: 640px) {
-	.home-container {
-		p {
-			font-size: 15px;
-		}
-		#nuestra-imprenta {
-			h2 {
-				font-size: 25px;
-			}
-		}
-	}
-	.taxonomy-description {
-		h3 {
-			font-size: 15px;
-		}
-		h4 {
-			font-size: 13.5px;
-		}
-	}
-}
-
 .woocommerce-Tabs-panel--description.panel p {
 	font-size: 14px;
 	font-weight: 300;
@@ -761,5 +716,49 @@ div.images {
 }
 .ywraq-wrapper.ywraq-empty .ywraq-before-form, .ywraq-wrapper.ywraq-with-form.ywraq-empty .ywraq-before-form {
 	border: 2px dashed #EFEFEF !important;
+}
+@media (max-width: 1024px) {
+	#marque-home h1, #marque-home span  {
+		font-size: 14px;
+	}
+	.home-container #ventajas-imprenta h2 {
+		font-size: 25px;
+	}
+}
+@media (max-width: 767px) {
+	.home-container #ventajas-imprenta h2 {
+		font-size: 20px;
+	}
+	.archive .woocommerce-breadcrumb {
+		font-size: 12px;
+	}
+	.taxonomy-description {
+		h3 {
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 15px;
+		}
+	}
+}
+@media (max-width: 640px) {
+	.home-container {
+		p {
+			font-size: 15px;
+		}
+		#nuestra-imprenta {
+			h2 {
+				font-size: 25px;
+			}
+		}
+	}
+	.taxonomy-description {
+		h3 {
+			font-size: 15px;
+		}
+		h4 {
+			font-size: 13.5px;
+		}
+	}
 }
 
