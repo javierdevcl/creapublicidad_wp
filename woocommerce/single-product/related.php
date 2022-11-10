@@ -28,7 +28,7 @@ if ( $related_products ) : ?>
 
 		if ( $heading ) :
 			?>
-			<span class="text-lg uppercase border-b border-black mb-4 md:mb-7 block"><?php echo esc_html( $heading ); ?></span>
+			<span class="text-base md:text-lg uppercase border-b border-black mb-4 md:mb-7 block"><?php echo esc_html( $heading ); ?></span>
 		<?php endif; ?>
 
 		<ul class="owl-carousel owl-relacionados">
