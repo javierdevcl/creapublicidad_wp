@@ -24,10 +24,11 @@
 							</button>
 						</div>
 						<div class="flex w-full md:w-2/6 order-3 md:order-2 mt-3 md:mt-0 items-center">
-							<form id="search" class="flex items-center m-auto">
+							<form id="search" action="{{ site.url }}" method="get" class="flex items-center m-auto">
 								<label for="header-search" class="sr-only">Buscar</label>
 								<div class="relative w-full">
-									<input type="text" id="header-search" class="bg-zinc-100 border-none focus:border-transparent focus:ring-0 text-sm placeholder-black font-bold rounded-l-3xl block w-full pl-5 md:pl-7 p-3.5 md:p-3" placeholder="¿Qué estas buscando?" required>
+									<input type="text" name="s" id="header-search" class="bg-zinc-100 border-none focus:border-transparent focus:ring-0 text-sm placeholder-black font-bold rounded-l-3xl block w-full pl-5 md:pl-7 p-3.5 md:p-3" placeholder="¿Qué estas buscando?" required>
+									<input type="hidden" name="post_type" value="product" />
 								</div>
 								<button type="submit" class="p-3.5 md:p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none">
 									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -84,12 +85,13 @@
 						<a href="{{site.url}}">
 							<img src="{{custom_logo_url}}" class="h-14 mt-4 mb-5 m-auto" alt="Logotipo CreaPublicidad">
 						</a>
-						<form id="search" class="flex items-center mb-5">
+						<form id="search" action="{{ site.url }}" method="get" class="flex items-center mb-5">
 							<label for="drawer-search" class="sr-only">Buscar</label>
 							<div class="relative w-full">
-								<input type="text" id="simple-search" class="bg-zinc-100 border-none text-sm placeholder-black font-semibold rounded-l-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-5 p-3" placeholder="¡Encuentre rápido su producto!" required>
+								<input type="text" name="s" id="simple-search" class="bg-zinc-100 border-none focus:border-transparent focus:ring-0 text-sm placeholder-black font-semibold rounded-l-3xl block w-full pl-5 p-3" placeholder="¡Encuentre rápido su producto!" required>
+								<input type="hidden" name="post_type" value="product" />
 							</div>
-							<button type="submit" class="p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+							<button type="submit" class="p-3 text-sm font-medium text-black bg-zinc-100 rounded-r-3xl border-none">
 								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 								<span class="sr-only">Buscar</span>
 							</button>

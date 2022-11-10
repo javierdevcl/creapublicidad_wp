@@ -21,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products mt-4 mb-12">
+	<section class="related products mt-4 mb-7 md:mb-12">
 
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
-			<h2 class="text-lg	uppercase border-b border-black mb-7"><?php echo esc_html( $heading ); ?></h2>
+			<span class="text-lg uppercase border-b border-black mb-4 md:mb-7"><?php echo esc_html( $heading ); ?></span>
 		<?php endif; ?>
 
 		<ul class="owl-carousel owl-relacionados">
