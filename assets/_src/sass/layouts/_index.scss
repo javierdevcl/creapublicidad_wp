@@ -790,5 +790,12 @@ div.images {
 	.ywraq-wrapper table.cart tr td {
 		padding: 20px 5px;
 	}
+	.ywraq-wrapper .form-row label {
+		width: 100%;
+		text-align: left;
+	}
+	.ywraq-wrapper .form-row .woocommerce-input-wrapper {
+		width: 100%;
+	}
 }
 
