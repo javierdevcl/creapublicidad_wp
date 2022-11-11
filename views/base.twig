@@ -11,13 +11,13 @@
 	<header class="header">
 			{% block header %}
 				<div class="bg-white">
-					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-4 md:px-6 py-5">
+					<div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl px-4 md:px-6 py-3 md:py-5">
 						<div class="flex w-3/6 md:w-1/6 order-1 items-center">
 							<button class="mr-6 leading-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation" aria-label="Menu">
 								<i class="fa fa-bars text-2xl" aria-hidden="true"></i>
 							</button>
 							<a href="{{site.url}}">
-								<img src="{{custom_logo_url}}" class="h-11" alt="Logotipo CreaPublicidad">
+								<img src="{{custom_logo_url}}" width="auto" class="object-left h-9 md:h-11" alt="Logotipo CreaPublicidad">
 							</a>
 							<button class="ml-10 text-base font-bold leading-none hidden lg:block" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
 								Productos
@@ -83,7 +83,7 @@
 				<div class="h-full grid grid-cols-1 content-between">
 					<div class="p-4 px-11">
 						<a href="{{site.url}}">
-							<img src="{{custom_logo_url}}" class="h-14 mt-4 mb-5 m-auto" alt="Logotipo CreaPublicidad">
+							<img src="{{custom_logo_url}}" class="h-14 mt-1 md:mt-4 mb-5 m-auto" alt="Logotipo CreaPublicidad">
 						</a>
 						<form id="search" action="{{ site.url }}" method="get" class="flex items-center mb-5">
 							<label for="drawer-search" class="sr-only">Buscar</label>
