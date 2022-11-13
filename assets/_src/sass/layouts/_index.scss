@@ -798,4 +798,65 @@ div.images {
 		width: 100%;
 	}
 }
-
+.page-id-1387 {
+	.wpcf7 {
+		label {
+			font-size: 16px;
+			font-weight: 400;
+			color: #000;
+			padding-top: 0px;
+			padding-bottom: 4px;
+			display: block;
+		}
+		input {
+			height: 45px;
+		}
+		input, textarea {
+			width: 100%;
+			border-radius: 0px;
+			border-color: #d3d5d6;
+		}
+		.required {
+			color: #E02B25;
+		}
+		input[type=submit] {
+			max-width: 170px;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 15px;
+			font-weight: 600;
+			background: #9b00ff;
+			border-radius: 6px;
+			padding: 13px 25px;
+			height: auto;
+			float: right;
+		}
+		#responsive-form{
+			margin:0 auto;
+			width:100%;
+		}
+		.form-row{
+			width: 100%;
+		}
+		.column-half, .column-full{
+			float: left;
+			position: relative;
+			padding: 0.35rem 0.65rem;
+			width:100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+		.clearfix:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		/**---------------- Media query ----------------**/
+		@media only screen and (min-width: 48em) {
+			.column-half{
+				width: 50%;
+			}
+		}
+	}
+}
