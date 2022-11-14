@@ -7,10 +7,18 @@
 				{% do wc_action('woocommerce_before_main_content') %}
 			</div>
 			{% if request.get.s %}
-				<div class="grid grid-cols-1 py-14">
+				<div class="grid grid-cols-1 py-8 md:py-14">
 					<div class="px-4">
 						{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
 							<h1 class="text-xl md:text-[30px] text-white text-center font-bold uppercase">{{ title }}</h1>
+						{% endif %}
+					</div>
+				</div>
+			{% elseif title == 'Tienda' %}
+				<div class="grid grid-cols-1 py-8 md:py-14">
+					<div class="px-4">
+						{% if fn('apply_filters', 'woocommerce_show_page_title', true) %}
+							<h1 class="text-[30px] text-white text-center font-bold uppercase">{{ title }}</h1>
 						{% endif %}
 					</div>
 				</div>
