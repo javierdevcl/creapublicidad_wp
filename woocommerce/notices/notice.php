@@ -26,7 +26,7 @@ if ( ! $notices ) {
 ?>
 
 <?php foreach ( $notices as $notice ) : ?>
-	<div class="woocommerce-info"<?php echo wc_get_notice_data_attr( $notice ); ?>>
+	<div class="woocommerce-info bg-blue-100 rounded-lg py-5 px-6 mb-3 text-base text-blue-700 inline-flex items-center w-full"<?php echo wc_get_notice_data_attr( $notice ); ?>>
 		<?php echo wc_kses_notice( $notice['notice'] ); ?>
 	</div>
 <?php endforeach; ?>
