@@ -117,6 +117,15 @@ function wpb_demo_shortcode() {
 
 add_shortcode('greeting', 'wpb_demo_shortcode');
 
+function wpb_shortcode() {
+	$wsp = array("+56953768917", "+56935421429", "+56935831178");
+	$number = array_rand($wsp);
+	$message = "https://wa.me/".$wsp[$number]."?text=Hola hice una cotización en la pagina web y quiero hablar con un vendedor de CreaPublicidad";
+	return $message;
+}
+
+add_shortcode('cotizar', 'wpb_shortcode');
+
 add_image_size( 'product-thumb', 360, 360, true );
 
 function wpb_modify_jquery() {
