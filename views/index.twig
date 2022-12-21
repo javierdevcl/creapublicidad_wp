@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
 	<div class="container-slider mx-auto">
-		<div class="grid grid-cols-1 md:grid-cols-[72.5%_26%] gap-7 py-0 md:py-5">
+		<div class="grid grid-cols-1 lg:grid-cols-[71%_26%] 2xl:grid-cols-[72%_26%] gap-7 py-0 md:py-5">
 			<div>
 				<div class="hidden md:block">
 					<div class="owl-carousel owl-slider">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid-cols-1 content-between hidden md:grid">
+			<div class="grid-cols-1 content-between hidden lg:grid">
 				<a href="{{ site.url }}/categoria/stickers/" class="duration-500 hover:opacity-75" aria-label="Stickers">
 					<img src="{{ Image(options.banner_home_1).src }}" alt="Stickers" class="w-full" />
 				</a>

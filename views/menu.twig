@@ -1,5 +1,5 @@
 {% if main_menu %}
-	<ul class="menu flex flex-row mt-0 mr-6 space-x-8 text-sm font-semibold">
+	<ul class="menu flex flex-row mt-0 mr-0 xl:mr-6 space-x-3 xl:space-x-8 text-xs xl:text-sm font-semibold">
 	{% for item in items %}
 		<li class="py-2.5 {{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">

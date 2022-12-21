@@ -15,9 +15,15 @@
 	position: relative;
 }
 
+@media (min-width: 1280px) {
+	.menu .menu-item-has-children ul.sub-menu {
+		@apply min-w-[210px];
+	}
+}
+
 @media (min-width: 1024px) {
 	.menu .menu-item-has-children ul.sub-menu {
-		@apply absolute bg-white shadow-2xl min-w-[210px] left-0 border-b
+		@apply absolute bg-white shadow-2xl left-0 border-b
 		border-b-gray-200 font-normal text-gray-700 mt-2.5 z-10 transition-all ease-in-out translate-y-5
 		opacity-0 pointer-events-none;
 	}

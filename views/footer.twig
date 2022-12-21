@@ -1,10 +1,10 @@
 <footer class="site-footer" id="colophon">
     <div id="footer-top" class="py-9 bg-zinc-800 hidden lg:block">
         <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="px-6 pb-6 lg:border-r border-neutral-600">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 xl:gap-4">
+                <div class="px-4 xl:px-6 pb-6 lg:border-r border-neutral-600">
                     <h4 class="text-white text-2xl font-light pb-8">Productos</h4>
-                    <ul class="text-gray-300 text-lg mb-0">
+                    <ul class="text-gray-300 text-md xl:text-lg mb-0">
                         {% for item in footer_menu_1.items %}
                             <li class="pb-3">
                                 <a href="{{ item.link }}" class="hover:text-white">{{ item.title }}</a>
@@ -12,9 +12,9 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="px-6 pb-6 lg:border-r border-neutral-600">
+                <div class="px-4 xl:px-6 pb-6 lg:border-r border-neutral-600">
                     <h4 class="text-white text-2xl font-light pb-8">Información</h4>
-                    <ul class="text-gray-300 text-lg mb-0">
+                    <ul class="text-gray-300 text-md xl:text-lg mb-0">
                         {% for item in footer_menu_2.items %}
                             <li class="pb-3">
                                 <a href="{{ item.link }}" class="hover:text-white">{{ item.title }}</a>
@@ -22,14 +22,14 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="px-6 pb-6 newsletter lg:border-r border-neutral-600">
+                <div class="px-4 xl:px-6 pb-6 newsletter lg:border-r border-neutral-600">
                     <h4 class="text-white text-2xl font-light pb-8">Newsletter</h4>
-                    <span class="text-gray-300 text-lg">Ingresa tu correo y recibe todas nuestras ofertas.</span>
+                    <span class="text-gray-300 text-md xl:text-lg">Ingresa tu correo y recibe todas nuestras ofertas.</span>
                 </div>
-                <div class="px-6 pb-6 contacto">
+                <div class="px-4 xl:px-6 pb-6 contacto">
                     <h4 class="text-white text-2xl font-light pb-8">Contacto</h4>
                     <span class="text-gray-300 text-lg">Envios a todo Chile</span>
-                    <ul class="text-gray-300 text-lg mt-3 mb-0">
+                    <ul class="text-gray-300 text-md xl:text-lg mt-3 mb-0">
                         <li class="pb-3">
                             <a href="tel:+562 2952 0966" class="hover:text-white">
                                 <i class="text-xl text-white mr-2 fas fa-phone-alt"></i> +562 2952 0966
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-	<div class="py-5 md:py-6 bg-black text-white text-xs md:text-sm leading-tight">
+	<div class="md:px-4 py-5 md:py-6 bg-black text-white text-xs md:text-sm leading-tight">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 				<div class="order-1">
