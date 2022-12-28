@@ -19,14 +19,19 @@ if (!empty($_POST))
 	$url = get_home_url();
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Old Page</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>" />
+</head>
+<body>
 <?php if (isset($nombre) AND isset($email)): ?>
 	<script>
-		window.location.href = '<?php echo $url; ?>';
 		localStorage.setItem('Nombre', '<?php echo $nombre; ?>');
 		localStorage.setItem('Email', '<?php echo $email; ?>');
 	</script>
-<?php else: ?>
-	<script>
-		window.location.href = '<?php echo $url; ?>';
-	</script>
 <?php endif ?>
+</body>
+</html>

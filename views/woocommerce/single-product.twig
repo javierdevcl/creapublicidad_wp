@@ -76,19 +76,19 @@
 					<span class="sr-only">Close modal</span>
 				</button>
 				<div class="px-8 py-8 lg:px-8">
-					<h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">¿Hablemos?.. 😎 Estas a 1 paso</h3>
+					<h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">¿Hablemos?.. 😎 <strong>Estas a 1 paso</strong></h3>
 					<p class="text-sm font-normal text-gray-500 dark:text-gray-400 pb-2">Completa los datos para agilizar el proceso y nuestro vendedor realice el presupuesto </p>
 					<form id="whatsapp-formulario" class="space-y-5" action="{{site.url}}/hablemos/" method="post">
 						<div>
 							<input type="hidden" name="titulo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5" value="{{ post.title }}" required>
 						</div>
 						<div>
-							<input type="text" name="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5" placeholder="Su Nombre" required>
+							<input type="text" id="nombre" name="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5" placeholder="Su Nombre" required>
 						</div>
 						<div>
-							<input type="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5" placeholder="Su Email" required>
+							<input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3.5" placeholder="Su Email" required>
 						</div>
-						<button type="submit" class="w-full text-white uppercase bg-[#1363df] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"  onclick="enviarFormulario()">
+						<button type="submit" class="w-full text-white uppercase bg-[#1363df] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 							Hablar por WhatsApp
 							<i aria-hidden="true" class="fab fa-whatsapp pl-3""></i>
 						</button>

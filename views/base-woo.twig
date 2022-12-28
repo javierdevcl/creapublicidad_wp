@@ -143,12 +143,13 @@
 
 	const modal = new Modal(whatsapp, options);
 
-	var nombre = localStorage.getItem("Nombre");
-	var email = localStorage.getItem("Email");
+	if (localStorage.getItem("Nombre") != null) {
+		var nombre = localStorage.getItem("Nombre");
+		var email = localStorage.getItem("Email");
 
-	document.getElementById("nombre").innerHTML = nombre;
-	document.getElementById("email").innerHTML = email;
-
+		document.getElementById("nombre").value = nombre;
+		document.getElementById("email").value = email;
+	}
 </script>
 
 </body>
