@@ -15,13 +15,18 @@ if (!empty($_POST))
 
 	$url = "https://wa.me/".$whatsapp[$numero]."?text=Hola quiero cotizar: '".$titulo."' en CreaPublicidad%0D%0AMi Nombre es: $nombre%0D%0AMi Email es: $email%0D%0AGracias.";
 
-	if (isset($nombre) AND isset($email)) {
-		header("Location: $url");
-		die();
-	}else {
-		$url = get_home_url();
-	}
-
 }else {
 	$url = get_home_url();
 }
+?>
+<?php if (isset($nombre) AND isset($email)): ?>
+	<script>
+		window.location.href = '<?php echo $url; ?>';
+		localStorage.setItem('Nombre', '<?php echo $nombre; ?>');
+		localStorage.setItem('Email', '<?php echo $email; ?>');
+	</script>
+<?php else: ?>
+	<script>
+		window.location.href = '<?php echo $url; ?>';
+	</script>
+<?php endif ?>

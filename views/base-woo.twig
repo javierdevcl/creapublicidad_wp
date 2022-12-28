@@ -142,6 +142,13 @@
 	};
 
 	const modal = new Modal(whatsapp, options);
+
+	var nombre = localStorage.getItem("Nombre");
+	var email = localStorage.getItem("Email");
+
+	document.getElementById("nombre").innerHTML = nombre;
+	document.getElementById("email").innerHTML = email;
+
 </script>
 
 </body>
