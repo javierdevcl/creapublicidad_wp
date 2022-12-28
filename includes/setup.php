@@ -108,14 +108,6 @@ function dequeue_gutenberg_theme_css() {
 }
 add_action( 'wp_enqueue_scripts', 'dequeue_gutenberg_theme_css', 100 );
 
-function wpb_demo_shortcode() {
-	$wsp = array("+56953768917", "+56935421429", "+56935831178");
-	$number = array_rand($wsp);
-	$message = "https://wa.me/".$wsp[$number]."?text=Hola quiero cotizar: '".get_the_title()."' en CreaPublicidad";
-	return $message;
-}
-
-add_shortcode('greeting', 'wpb_demo_shortcode');
 
 function wpb_shortcode() {
 	$wsp = array("+56953768917", "+56935421429", "+56935831178");

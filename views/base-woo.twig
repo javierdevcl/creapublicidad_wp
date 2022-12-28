@@ -133,5 +133,16 @@
 	<script src="{{ site.theme.link }}/assets/dist/owl.js"></script>
 	{{ function('wp_footer') }}
 {% endblock %}
+
+<script>
+	const whatsapp = document.getElementById('whatsapp-modal');
+
+	const options = {
+		backdropClasses: 'bg-neutral-900 bg-opacity-90 fixed inset-0 z-40',
+	};
+
+	const modal = new Modal(whatsapp, options);
+</script>
+
 </body>
 </html>
