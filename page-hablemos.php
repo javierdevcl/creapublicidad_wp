@@ -15,6 +15,18 @@ if (!empty($_POST))
 
 	$url = "https://wa.me/".$whatsapp[$numero]."?text=Hola quiero cotizar: '".$titulo."' en CreaPublicidad%0D%0AMi Nombre es: $nombre%0D%0AMi Email es: $email%0D%0AGracias.";
 
+	$data = array(
+		'nombre' => $nombre,
+		'email' => $email,
+		'titulo' => $titulo
+	);
+
+	$query = http_build_query($data);
+
+	$result = file_get_contents('https://hook.us1.make.com/jxm3un9jo1rxyjowvcsuilu3207cj9t9' . $query);
+
+	echo $result;
+
 }else {
 	$url = get_home_url();
 }
