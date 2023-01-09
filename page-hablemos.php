@@ -18,14 +18,22 @@ if (!empty($_POST))
 	$data = array(
 		'nombre' => $nombre,
 		'email' => $email,
-		'titulo' => $titulo
+		'titulo' => $titulo,
+		'fuente' => 'WhatsApp Producto Web',
 	);
 
-	$query = http_build_query($data);
+	$options = array(
+		'http' => array(
+			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+			'method'  => 'POST',
+			'content' => http_build_query($data),
+		),
+	);
 
-	$result = file_get_contents('https://hook.us1.make.com/jxm3un9jo1rxyjowvcsuilu3207cj9t9' . $query);
+	$context  = stream_context_create($options);
 
-	echo $result;
+	$result = file_get_contents('https://hook.us1.make.com/jxm3un9jo1rxyjowvcsuilu3207cj9t9', false, $context);
+
 
 }else {
 	$url = get_home_url();
@@ -34,7 +42,7 @@ if (!empty($_POST))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Old Page</title>
+	<title>WhatsApp Producto We</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>" />
 </head>
