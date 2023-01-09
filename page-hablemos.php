@@ -6,6 +6,7 @@
 
 if (!empty($_POST))
 {
+	$vendedor = $_POST['vendedor'];
 	$titulo = $_POST['titulo'];
 	$nombre = $_POST['nombre'];
 	$email = $_POST['email'];
@@ -13,7 +14,11 @@ if (!empty($_POST))
 	$whatsapp = array("+56953768917", "+56935421429", "+56935831178");
 	$numero = array_rand($whatsapp);
 
-	$url = "https://wa.me/".$whatsapp[$numero]."?text=Hola quiero cotizar: '".$titulo."' en CreaPublicidad%0D%0AMi Nombre es: $nombre%0D%0AMi Email es: $email%0D%0AGracias.";
+	if (empty($vendedor)) {
+		$vendedor = $whatsapp[$numero];
+	}
+
+	$url = "https://wa.me/".$vendedor."?text=Hola quiero cotizar: '".$titulo."' en CreaPublicidad%0D%0AMi Nombre es: $nombre%0D%0AMi Email es: $email%0D%0AGracias.";
 
 	$data = array(
 		'nombre' => $nombre,
@@ -45,10 +50,12 @@ if (!empty($_POST))
 	<title>WhatsApp Producto We</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>" />
+
 </head>
 <body>
 <?php if (isset($nombre) AND isset($email)): ?>
 	<script>
+		localStorage.setItem('Vendedor', '<?php echo $vendedor; ?>');
 		localStorage.setItem('Nombre', '<?php echo $nombre; ?>');
 		localStorage.setItem('Email', '<?php echo $email; ?>');
 	</script>
