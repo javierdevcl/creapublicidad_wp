@@ -50,7 +50,25 @@ if (!empty($_POST))
 	<title>WhatsApp Producto We</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>" />
-
+	<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+	<script data-cfasync="false" data-pagespeed-no-defer>
+		var gtm4wp_datalayer_name = "dataLayer";
+		var dataLayer = dataLayer || [];
+	</script>
+	<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- GTM Container placement set to automatic -->
+	<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+		var dataLayer_content = {"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"creapublicidad"};
+		dataLayer.push( dataLayer_content );
+	</script>
+	<script data-cfasync="false">
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KBTP3N7');
+	</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body>
 <?php if (isset($nombre) AND isset($email)): ?>
