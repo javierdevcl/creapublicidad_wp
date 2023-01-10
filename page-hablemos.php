@@ -11,7 +11,7 @@ if (!empty($_POST))
 	$nombre = $_POST['nombre'];
 	$email = $_POST['email'];
 
-	$whatsapp = array("+56953768917", "+56935421429", "+56935831178");
+	$whatsapp = array("56953768917", "56935421429", "56935831178");
 	$numero = array_rand($whatsapp);
 
 	if (empty($vendedor)) {
